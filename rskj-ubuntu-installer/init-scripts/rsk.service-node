@@ -1,0 +1,13 @@
+[Unit]
+Description=RSK Node
+
+[Service]
+Type=simple
+ExecStart=<JAVA_PATH> -Dlogback.configurationFile='/etc/rsk/logback.xml' -Drsk.conf.file=/etc/rsk/node.conf -cp /usr/share/rsk/rsk.jar co.rsk.Start 2>&1 &
+ExecStop=/bin/kill -9 $(/bin/ps -U rsk -o pid h)
+PIDFile=/var/run/rsk.pid
+User=rsk
+
+[Install]
+WantedBy=multi-user.target
+

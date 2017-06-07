@@ -1,0 +1,35 @@
+rskj (0.2.1~trusty) trusty; urgency=medium
+
+  * Allow resume node preserving the state of the blockchain (PR #100).
+
+  * Peer discovery bug fixes (PR #98).
+
+  * Blockchain synchronization improvements (PRs #83, #88, #91, #92, #93).
+
+  * Changed permissons for “gradlew” file (PR #90).
+
+  * Default value for “details.inmemory.storage.limit” setting modified in sample configuration file (PR #89).
+
+  * Avoid reprocessing already received block and transaction messages (PR #87).
+
+  * Cleaned up unnecessary files from the repository (PR #86).
+
+  * New log messages in block validation logic (PR #85).
+
+  * Process only children blocks when adding a new block in Block Processor (PR #84).
+
+  * New RPC method “ext_dumpBlockchain” (PR #79).
+
+  * Code minor improvements (PR #78).
+
+  * Added the possibility of flushing the repository every N blocks (PR #77).
+
+  * Consider uncles in BlockStore.removeBlock method (PR #74).
+
+ -- RSK Release Signing Key <support@rsk.co>  Wed, 07 Jun 2017 14:51:11 -0300
+
+rskj (0.2.0.a~trusty) trusty; urgency=medium
+
+  * Initial release.
+
+ -- RSK Release Signing Key <support@rsk.co>  Fri, 26 May 2017 12:32:19 -0300
