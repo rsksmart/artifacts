@@ -1,6 +1,8 @@
 # BuildMachine Docker File 
 
-This ***Dockerfile*** is for reproducible builds of [RSK Node](http://www.rsk.co/). Is not published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
+This ***Dockerfile*** is for [reproducible build](https://github.com/rsksmart/rskj/wiki/Reproducible-Build) of [RSK Node](http://www.rsk.co/). Is not published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
+
+To use this container, follow the [reproducible build](https://github.com/rsksmart/rskj/wiki/Reproducible-Build) procedure.
 
 ### Base Docker Image
 
@@ -15,7 +17,7 @@ docker build -t buildmachine .
 
 Build
 ```bash
-docker run -v $(pwd):/rskj -w /rskj buildmachine:latest ./gradlew shadow
+docker run -v $(pwd):/rskj -w /rskj buildmachine:latest ./gradlew shadow reproducible
 ```
 
 First of all, we have changed our working directory to the repository root, because we actually need Gradle and the root project in the Docker container as well
