@@ -1,3 +1,23 @@
+rskj (0.2.2~trusty) trusty; urgency=medium
+
+  * Total difficulty loading when resuming from an existent local blockchain (#124).
+
+  * Already processed messages cache is cleared periodically (#111).
+
+  * Sending more blocks as a result of status message in sync (#113).
+
+  * Cache blocks in block store to avoid unnecessary disk accesses (#119).
+
+  * Additional performance improvements (#116, #118).
+
+  * Infos were not being properly updated on rebranching (#115).
+
+  * Fixed bug that was preventing txs from being processed due to incorrect nonce in certain scenarios (#121).
+
+  * Accept advanced blocks if sync does not make progress after some time (#127).
+
+ -- RSK Release Signing Key <support@rsk.co>  Wed, 28 Jun 2017 18:06:40 -0300
+
 rskj (0.2.1~trusty) trusty; urgency=medium
 
   * Allow resume node preserving the state of the blockchain (PR #100).
