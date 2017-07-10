@@ -1,8 +1,8 @@
-rskj (<V>~trusty) trusty; urgency=medium
+rskj (0.2.3~trusty) trusty; urgency=medium
 
   * Fixed issue that caused miners to eventually produce invalid blocks.
 
- -- RSK Release Signing Key <support@rsk.co>  <DATE>
+ -- RSK Release Signing Key <support@rsk.co>  Mon, 10 Jul 2017 14:25:57 -0300
 
 rskj (0.2.2~trusty) trusty; urgency=medium
 
