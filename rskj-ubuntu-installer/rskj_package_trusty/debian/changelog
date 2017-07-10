@@ -1,3 +1,9 @@
+rskj (<V>~trusty) trusty; urgency=medium
+
+  * Fixed issue that caused miners to eventually produce invalid blocks.
+
+ -- RSK Release Signing Key <support@rsk.co>  <DATE>
+
 rskj (0.2.2~trusty) trusty; urgency=medium
 
   * Total difficulty loading when resuming from an existent local blockchain (#124).
