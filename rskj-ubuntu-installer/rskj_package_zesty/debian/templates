@@ -1,0 +1,22 @@
+Template: shared/accepted-rsk-license-v1-1
+Type: boolean
+Default: false
+Description: Do you agree to the terms of the applicable licenses?
+ You are about to install rskj
+ .
+ Copyright (C) 2017 RSK Labs Ltd. (partly derived from ethereumJ library, Copyright (C) 2017 <ether.camp>)
+ .
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
+ You should have received a copy of the GNU Lesser General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ Intellectual property rights to the contents of specific files are owned by their respective authors. Appropriate licensing information can be found on <https://github.com/rsksmart/rskj/blob/master/COPYING> and in the appropriate text files within the installation package.
+ .
+ Please read and agree to the terms of the applicable licenses in order to continue.
+
+Template: shared/error-rsk-license-v1-1
+Type: error
+Description: You did not agree to the terms of the applicable licenses.
+ .
+ The installation of this package cannot continue.
