@@ -66,6 +66,7 @@
     <logger name="org.springframework" level="ERROR"/>
     <logger name="rlp" level="ERROR"/>
     <logger name="messagehandler" level="ERROR"/>
+    <logger name="syncprocessor" level="TRACE"/>
     <logger name="sync" level="ERROR"/>
     <logger name="BtcToRskClient" level="ERROR"/>
     <logger name="ui" level="ERROR"/>
