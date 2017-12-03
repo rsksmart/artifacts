@@ -15,11 +15,11 @@ LOG_PATH="/var/log/rsk"
 JAVA=$(which java)
 SOLC_PATH=$(which solc || echo /bin/false)
 
-KEY_NODE_ID=$(echo | $JAVA -D-Dlogback.configurationFile='$CONF_PATH/logback.xml' -cp $JAR_PATH/rsk.jar co.rsk.GenNodeKeyId)
-PRIVATE_KEY=$(echo "${KEY_NODE_ID:26}" | python3 -c "import sys, json; print(json.load(sys.stdin)['privateKey'])")
-PUBLIC_KEY=$(echo "${KEY_NODE_ID:26}" | python3 -c "import sys, json; print(json.load(sys.stdin)['publicKey'])")
-ADDRESS=$(echo "${KEY_NODE_ID:26}" | python3 -c "import sys, json; print(json.load(sys.stdin)['address'])")
-NODE_ID=$(echo "${KEY_NODE_ID:26}" | python3 -c "import sys, json; print(json.load(sys.stdin)['nodeId'])")
+KEY_NODE_ID=$($JAVA -D-Dlogback.configurationFile='$CONF_PATH/logback.xml' -cp $JAR_PATH/rsk.jar co.rsk.GenNodeKeyId)
+PRIVATE_KEY=$(echo "$KEY_NODE_ID" | python3 -c "import sys, json; print(json.load(sys.stdin)['privateKey'])")
+PUBLIC_KEY=$(echo "$KEY_NODE_ID" | python3 -c "import sys, json; print(json.load(sys.stdin)['publicKey'])")
+ADDRESS=$(echo "$KEY_NODE_ID" | python3 -c "import sys, json; print(json.load(sys.stdin)['address'])")
+NODE_ID=$(echo "$KEY_NODE_ID" | python3 -c "import sys, json; print(json.load(sys.stdin)['nodeId'])")
  
 COINBASE_SECRET=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
 
