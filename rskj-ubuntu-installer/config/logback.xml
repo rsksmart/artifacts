@@ -38,6 +38,7 @@
 
     <logger name="execute" level="INFO"/>
     <logger name="blockvalidator" level="INFO"/>
+    <logger name="blocksyncservice" level="TRACE"/>
     <logger name="blockexecutor" level="INFO"/>
     <logger name="general" level="DEBUG"/>
     <logger name="gaspricetracker" level="ERROR"/>
@@ -66,6 +67,7 @@
     <logger name="org.springframework" level="ERROR"/>
     <logger name="rlp" level="ERROR"/>
     <logger name="messagehandler" level="ERROR"/>
+    <logger name="syncprocessor" level="TRACE"/>
     <logger name="sync" level="ERROR"/>
     <logger name="BtcToRskClient" level="ERROR"/>
     <logger name="ui" level="ERROR"/>
