@@ -10,7 +10,7 @@ NODE_SERVICE="/lib/systemd/system/rsk.service"
 HOME_PATH="/var/lib/rsk"
 JAR_PATH="/usr/share/rsk"
 CONF_PATH="/etc/rsk"
-LOG_PATH="/var/log"
+LOG_PATH="/var/log/rsk"
 
 JAVA=$(which java)
 SOLC_PATH=$(which solc || echo /bin/false)
