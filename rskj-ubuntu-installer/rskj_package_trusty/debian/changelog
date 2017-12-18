@@ -1,3 +1,21 @@
+rskj (0.3.0~trusty) trusty; urgency=medium
+
+  * DUPN, SWAPN and TXINDEX new opcodes (#261).
+
+  * Addition of REVERT opcode (#230).
+
+  * Support for big integer modular exponentiation (#231).
+
+  * Other Ethereum Improvement Proposals have been implemented (#253, #267).
+
+  * Return status results for mined block submission (#227).
+
+  * New blockchain synchronization model (#220, #246, #276) is more stable and secure than previous version.
+
+  * Bug fixes (#234, #242, #243, #252, #270, #278, #282).
+
+ -- RSK Release Signing Key <support@rsk.co>  Tue, 05 Dec 2017 15:23:50 -0300
+
 rskj (0.2.3~trusty) trusty; urgency=medium
 
   * Fixed issue that caused miners to eventually produce invalid blocks.
