@@ -34,7 +34,7 @@ rskj (0.2.5~xenial) xenial; urgency=medium
 
  -- RSK Release Signing Key <support@rsk.co>  Mon, 10 Jul 2017 14:25:57 -0300
 
- rskj (0.2.4~xenial) xenial; urgency=medium
+rskj (0.2.4~xenial) xenial; urgency=medium
 
   * Add support for IPv6 addresses in bootstrap nodes (#138).
 

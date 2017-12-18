@@ -51,15 +51,21 @@ cp $FILE_NAME_NODE $WORKSPACE/source/zesty/rskj_$VERSION/src/rsk.jar
 cp $FILE_NAME_NODE $WORKSPACE/source/xenial/rskj_$VERSION/src/rsk.jar
 cp $FILE_NAME_NODE $WORKSPACE/source/trusty/rskj_$VERSION/src/rsk.jar
 
-cp ~/artifacts/rskj-ubuntu-installer/config/node.conf $WORKSPACE/source/zesty/rskj_$VERSION/src/node.conf
+cp ~/artifacts/rskj-ubuntu-installer/config/regtest.conf $WORKSPACE/source/zesty/rskj_$VERSION/src/regtest.conf
+cp ~/artifacts/rskj-ubuntu-installer/config/mainnet.conf $WORKSPACE/source/zesty/rskj_$VERSION/src/mainnet.conf
+cp ~/artifacts/rskj-ubuntu-installer/config/testnet.conf $WORKSPACE/source/zesty/rskj_$VERSION/src/testnet.conf
 cp ~/artifacts/rskj-ubuntu-installer/config/logback.xml $WORKSPACE/source/zesty/rskj_$VERSION/src/
 cp ~/artifacts/rskj-ubuntu-installer/init-scripts/rsk.service-node $WORKSPACE/source/zesty/rskj_$VERSION/src/rsk.service
 
-cp ~/artifacts/rskj-ubuntu-installer/config/node.conf $WORKSPACE/source/xenial/rskj_$VERSION/src/node.conf
+cp ~/artifacts/rskj-ubuntu-installer/config/testnet.conf $WORKSPACE/source/xenial/rskj_$VERSION/src/testnet.conf
+cp ~/artifacts/rskj-ubuntu-installer/config/regtest.conf $WORKSPACE/source/xenial/rskj_$VERSION/src/regtest.conf
+cp ~/artifacts/rskj-ubuntu-installer/config/mainnet.conf $WORKSPACE/source/xenial/rskj_$VERSION/src/mainnet.conf
 cp ~/artifacts/rskj-ubuntu-installer/config/logback.xml $WORKSPACE/source/xenial/rskj_$VERSION/src/
 cp ~/artifacts/rskj-ubuntu-installer/init-scripts/rsk.service-node $WORKSPACE/source/xenial/rskj_$VERSION/src/rsk.service
 
-cp ~/artifacts/rskj-ubuntu-installer/config/node.conf $WORKSPACE/source/trusty/rskj_$VERSION/src/node.conf
+cp ~/artifacts/rskj-ubuntu-installer/config/regtest.conf $WORKSPACE/source/trusty/rskj_$VERSION/src/regtest.conf
+cp ~/artifacts/rskj-ubuntu-installer/config/mainnet.conf $WORKSPACE/source/trusty/rskj_$VERSION/src/mainnet.conf
+cp ~/artifacts/rskj-ubuntu-installer/config/testnet.conf $WORKSPACE/source/trusty/rskj_$VERSION/src/testnet.conf
 cp ~/artifacts/rskj-ubuntu-installer/config/logback.xml $WORKSPACE/source/trusty/rskj_$VERSION/src/
 cp ~/artifacts/rskj-ubuntu-installer/init-scripts/rsk-node $WORKSPACE/source/trusty/rskj_$VERSION/src/rsk
 
@@ -88,4 +94,3 @@ mkdir -p $WORKSPACE/build/{xenial,trusty,zesty}
 mv $WORKSPACE/source/trusty/rskj_$VERSION* $WORKSPACE/build/trusty/
 mv $WORKSPACE/source/xenial/rskj_$VERSION* $WORKSPACE/build/xenial/
 mv $WORKSPACE/source/zesty/rskj_$VERSION* $WORKSPACE/build/zesty/
-

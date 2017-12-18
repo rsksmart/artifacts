@@ -26,10 +26,12 @@ Type: select
 Choices: mainnet, testnet, regtest
 Description: Choose a configuration environment to run your node.
  .
- Choose a configuration environment to run your node.
+ Choose the environment you want to configure to run your node.
  .
- Mainnet: Your node will run against mainnet network.
+  * Mainnet: Your node will run against mainnet network.
  .
- Testnet: Your node will run against testnet network.
+  * Testnet: Your node will run against testnet network.
  .
- Regtest: Your node will run against regtest network.
+  * Regtest: Your node will run against regtest network.
+ .
+ NOTE: To reconfigure your node once installed, you need to change the symbolic link located in /etc/rsk.

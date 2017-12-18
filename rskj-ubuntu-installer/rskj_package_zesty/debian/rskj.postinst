@@ -2,7 +2,7 @@
 
 # Source debconf library.
 . /usr/share/debconf/confmodule
- 
+
 # Exit on error
 set -e
 
@@ -20,7 +20,7 @@ PRIVATE_KEY=$(echo "$KEY_NODE_ID" | python3 -c "import sys, json; print(json.loa
 PUBLIC_KEY=$(echo "$KEY_NODE_ID" | python3 -c "import sys, json; print(json.load(sys.stdin)['publicKey'])")
 ADDRESS=$(echo "$KEY_NODE_ID" | python3 -c "import sys, json; print(json.load(sys.stdin)['address'])")
 NODE_ID=$(echo "$KEY_NODE_ID" | python3 -c "import sys, json; print(json.load(sys.stdin)['nodeId'])")
- 
+
 COINBASE_SECRET=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
 
 if [ ! -d $LOG_PATH ]; then
@@ -29,19 +29,43 @@ fi
 
 if [ ! -d $HOME_PATH ]; then
 	mkdir /var/lib/rsk
-fi 
+fi
 
 chown rsk:rsk $HOME_PATH -R
 chown rsk:rsk $LOG_PATH -R
 
-sed -i "s|<COINBASE_SECRET>|${COINBASE_SECRET}|g" $CONF_PATH/node.conf
-sed -i "s|<PRIVATE_KEY>|${PRIVATE_KEY}|g" $CONF_PATH/node.conf
-sed -i "s|<PUBLIC_KEY>|${PUBLIC_KEY}|g" $CONF_PATH/node.conf
-sed -i "s|<ADDRESS>|${ADDRESS}|g" $CONF_PATH/node.conf
-sed -i "s|<NODE_ID>|${NODE_ID}|g" $CONF_PATH/node.conf
-sed -i "s|<SOLC_PATH>|${SOLC_PATH}|g" $CONF_PATH/node.conf
+sed -i "s|<COINBASE_SECRET>|${COINBASE_SECRET}|g" $CONF_PATH/testnet.conf
+sed -i "s|<COINBASE_SECRET>|${COINBASE_SECRET}|g" $CONF_PATH/regtest.conf
+sed -i "s|<COINBASE_SECRET>|${COINBASE_SECRET}|g" $CONF_PATH/mainnet.conf
+sed -i "s|<PRIVATE_KEY>|${PRIVATE_KEY}|g" $CONF_PATH/testnet.conf
+sed -i "s|<PRIVATE_KEY>|${PRIVATE_KEY}|g" $CONF_PATH/regtest.conf
+sed -i "s|<PRIVATE_KEY>|${PRIVATE_KEY}|g" $CONF_PATH/mainnet.conf
+sed -i "s|<PUBLIC_KEY>|${PUBLIC_KEY}|g" $CONF_PATH/testnet.conf
+sed -i "s|<PUBLIC_KEY>|${PUBLIC_KEY}|g" $CONF_PATH/regtest.conf
+sed -i "s|<PUBLIC_KEY>|${PUBLIC_KEY}|g" $CONF_PATH/mainnet.conf
+sed -i "s|<ADDRESS>|${ADDRESS}|g" $CONF_PATH/testnet.conf
+sed -i "s|<ADDRESS>|${ADDRESS}|g" $CONF_PATH/regtest.conf
+sed -i "s|<ADDRESS>|${ADDRESS}|g" $CONF_PATH/mainnet.conf
+sed -i "s|<NODE_ID>|${NODE_ID}|g" $CONF_PATH/testnet.conf
+sed -i "s|<NODE_ID>|${NODE_ID}|g" $CONF_PATH/regtest.conf
+sed -i "s|<NODE_ID>|${NODE_ID}|g" $CONF_PATH/mainnet.conf
+sed -i "s|<SOLC_PATH>|${SOLC_PATH}|g" $CONF_PATH/testnet.conf
+sed -i "s|<SOLC_PATH>|${SOLC_PATH}|g" $CONF_PATH/regtest.conf
+sed -i "s|<SOLC_PATH>|${SOLC_PATH}|g" $CONF_PATH/mainnet.conf
 sed -i "s|<JAVA_PATH>|${JAVA}|g" $NODE_SERVICE
 
 systemctl enable rsk.service
+
+db_fset shared/config seen false
+db_input critical shared/config || true
+db_go || true
+
+db_get shared/config
+if [[ $RET =~ ^(mainnet|testnet|regtest)$ ]]; then
+	if [[ -a /etc/rsk/node.conf ]]; then
+		rm -f /etc/rsk/node.conf
+	fi
+	ln -s $CONF_PATH/$RET.conf $CONF_PATH/node.conf
+fi
 
 #DEBHELPER#
