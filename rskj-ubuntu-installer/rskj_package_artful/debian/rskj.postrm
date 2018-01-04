@@ -1,11 +1,10 @@
-#!/bin/bash -e
-
+#!/bin/sh -e
 # Source debconf library.
 . /usr/share/debconf/confmodule
+ 
+# Exit on error
 set -e
 
-CONF_PATH="/etc/rsk"
-
-systemctl disable rsk.service
+db_purge
 
 #DEBHELPER#

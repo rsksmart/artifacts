@@ -1,35 +1,53 @@
 rskj (0.3.0~trusty) trusty; urgency=medium
 
   * DUPN, SWAPN and TXINDEX new opcodes (#261).
+
   * Addition of REVERT opcode (#230).
+
   * Support for big integer modular exponentiation (#231).
+
   * Other Ethereum Improvement Proposals have been implemented (#253, #267).
+
   * Return status results for mined block submission (#227).
+
   * New blockchain synchronization model (#220, #246, #276) is more stable and secure than previous version.
+
   * Bug fixes (#234, #242, #243, #252, #270, #278, #282).
 
- -- RSK Release Signing Key <support@rsk.co>  Mon, 10 Jul 2017 14:25:57 -0300
+ -- RSK Release Signing Key <support@rsk.co>  Tue, 05 Dec 2017 15:23:50 -0300
 
 rskj (0.2.5~trusty) trusty; urgency=medium
 
   * Add peer scoring (#151).
+
   * Replace Jetty with Netty as JSON-RPC Server (#156).
-  * Remove eth_addAccount web3 method(#159).
+
+  * Remove eth_addAccount web3 method (#159).
+
   * Validate tx gas limit on pending state (#161).
-  * Fix issues with RLP border cases(#162).
+
+  * Fix issues with RLP border cases (#162).
+
   * Validate uncles are not siblings (#163).
+
   * Fix “out of memory” issues in VMTrace save (#165).
 
  -- RSK Release Signing Key <support@rsk.co>  Mon, 10 Jul 2017 14:25:57 -0300
 
- rskj (0.2.4~trusty) trusty; urgency=medium
+rskj (0.2.4~trusty) trusty; urgency=medium
 
   * Add support for IPv6 addresses in bootstrap nodes (#138).
+
   * Use connection IP in peer discovery process (#137).
+
   * Fix minor code smells identified by Sonar (#136).
+
   * Refactor blockchain code to avoid reading full blocks (#145).
+
   * Prevent double init of NodeMessageHandler (#149).
+
   * Block gas limit calculation logic improvements (#135).
+
   * Support for segwit txs in merge mining functionality (#152).
 
  -- RSK Release Signing Key <support@rsk.co>  Mon, 10 Jul 2017 14:25:57 -0300

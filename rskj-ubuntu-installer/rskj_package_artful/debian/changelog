@@ -1,4 +1,4 @@
-rskj (0.3.0~zesty) zesty; urgency=medium
+rskj (0.3.0~artful) artful; urgency=medium
 
   * DUPN, SWAPN and TXINDEX new opcodes (#261).
 
@@ -16,7 +16,7 @@ rskj (0.3.0~zesty) zesty; urgency=medium
 
  -- RSK Release Signing Key <support@rsk.co>  Mon, 10 Jul 2017 14:25:57 -0300
 
-rskj (0.2.5~zesty) zesty; urgency=medium
+rskj (0.2.5~artful) artful; urgency=medium
 
   * Add peer scoring (#151).
 
@@ -34,7 +34,7 @@ rskj (0.2.5~zesty) zesty; urgency=medium
 
  -- RSK Release Signing Key <support@rsk.co>  Mon, 10 Jul 2017 14:25:57 -0300
 
-rskj (0.2.4~zesty) zesty; urgency=medium
+rskj (0.2.4~artful) artful; urgency=medium
 
   * Add support for IPv6 addresses in bootstrap nodes (#138).
 
@@ -52,13 +52,13 @@ rskj (0.2.4~zesty) zesty; urgency=medium
 
  -- RSK Release Signing Key <support@rsk.co>  Mon, 10 Jul 2017 14:25:57 -0300
 
-rskj (0.2.3~zesty) zesty; urgency=medium
+rskj (0.2.3~artful) artful; urgency=medium
 
   * Fixed issue that caused miners to eventually produce invalid blocks.
 
  -- RSK Release Signing Key <support@rsk.co>  Mon, 10 Jul 2017 14:25:57 -0300
 
-rskj (0.2.2~zesty) zesty; urgency=medium
+rskj (0.2.2~artful) artful; urgency=medium
 
   * Total difficulty loading when resuming from an existent local blockchain (#124).
 
@@ -78,7 +78,7 @@ rskj (0.2.2~zesty) zesty; urgency=medium
 
  -- RSK Release Signing Key <support@rsk.co>  Wed, 28 Jun 2017 18:06:40 -0300
 
-rskj (0.2.1~zesty) zesty; urgency=medium
+rskj (0.2.1~artful) artful; urgency=medium
 
   * Allow resume node preserving the state of the blockchain (PR #100).
 
@@ -108,7 +108,7 @@ rskj (0.2.1~zesty) zesty; urgency=medium
 
  -- RSK Release Signing Key <support@rsk.co>  Wed, 07 Jun 2017 14:51:11 -0300
 
-rskj (0.2.0.a~zesty) zesty; urgency=medium
+rskj (0.2.0.a~artful) artful; urgency=medium
 
   * Initial release.
 

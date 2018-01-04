@@ -6,7 +6,6 @@ set -e
 
 CONF_PATH="/etc/rsk"
 
-invoke-rc.d rsk stop
 systemctl disable rsk.service
 
 #DEBHELPER#

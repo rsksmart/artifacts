@@ -27,7 +27,7 @@ start() {
     exit 1
   fi
   echo -n "Starting application: "
-/bin/su - rsk -s /bin/bash -c "<JAVA_PATH> -Dlogback.configurationFile='/etc/rsk/logback.xml' -Drsk.conf.file=/etc/rsk/node.conf -cp /usr/share/rsk/rsk.jar co.rsk.Start > /dev/null 2>&1 &"
+/bin/su - rsk -s /bin/bash -c "<JAVA_PATH> -Dlogback.configurationFile='/etc/rsk/logback.xml' -cp /usr/share/rsk/rsk.jar co.rsk.Start > /dev/null 2>&1 &"
   echo "OK"
 }
 
