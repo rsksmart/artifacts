@@ -1,3 +1,19 @@
+rskj (0.4.0~trusty) trusty; urgency=medium
+
+  * Default configuration is now Mainnet (#349)
+
+  * Support for Ethereum Improvement Proposal 658 (#333)
+
+  * Trie serialization/deserialization improvements (#315)
+
+  * RETURNDATASIZE and RETURNDATACOPY new opcodes (#306)
+
+  * Bridge native contract improvements (#341, #346, #347, #378)
+
+  * Bug fixes (#301, #312, #314, #335)
+
+ -- RSK Release Signing Key <support@rsk.co>  Fri, 05 Jan 2018 14:59:08 -0300
+
 rskj (0.3.0~trusty) trusty; urgency=medium
 
   * DUPN, SWAPN and TXINDEX new opcodes (#261).
