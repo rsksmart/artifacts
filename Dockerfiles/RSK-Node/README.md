@@ -12,13 +12,37 @@ This repository contains **Dockerfile** of [RSK Node](http://www.rsk.co/) for [D
 
 1. Install [Docker](https://docs.docker.com/engine/installation/).
 
-2. Build the image from the Dockerfile: 
-```bash
-docker build -t rsk_node .
-``` 
+2. Build the image from the Dockerfile:
+  * MaiNet
 
-### Usage
+  ```bash
+ docker build -t mainnet -f Dockerfile.MainNet .
+ ```
+  * TestNet
+
+  ```bash
+  docker build -t testnet -f Dockerfile.TestNet .
+  ```
+
+  * RegTest
+
+  ```bash
+  docker build -t regtest -f Dockerfile.RegTest .
+  ```
+
+### Usage Examples
+* MainNet
+
 ```bash
-docker run -d --name rsk-node-01  -p 4444:4444 -p 50505:50505 rsk_node
+docker run -d --name mainnet-node-01  -p 4444:4444 -p 5050:5050 mainnet
 ```
+* TestNet
 
+```bash
+docker run -d --name testnet-node-01  -p 4444:4444 -p 50505:50505 testnet
+```
+* RegTest
+
+```bash
+docker run -d --name regtest-node-01  -p 4444:4444 -p 30305:30305 regtest
+```
