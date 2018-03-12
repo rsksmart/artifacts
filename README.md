@@ -6,3 +6,6 @@ Dockerfiles for:
 
 # rskj-ubuntu-installer
 Source code to build rskj ubuntu installer
+
+# migrations
+`migration.properties` used for upgrading configuration file between versions.
