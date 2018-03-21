@@ -1,3 +1,21 @@
+rskj (0.4.1~xenial) xenial; urgency=medium
+
+  * Introduce txpool JSON-RPC module (#471, #484, #497).
+
+  * Add support for 'pending' in eth_call JSON-RPC method (#490).
+
+  * Synchronization enhancements (#510, #507, #505).
+
+  * New block submissions methods (#486).
+
+  * Dns rebinding attack prevention (#459).
+
+  * Web3 filters improvements (#442).
+
+  * Logging improvements (#424, #423, #418). 
+
+ -- RSK Release Signing Key <support@rsk.co>  Tue, 20 Mar 2018 19:34:03 -0300
+
 rskj (0.4.0~xenial) xenial; urgency=medium
 
   * Default configuration is now Mainnet (#349)
