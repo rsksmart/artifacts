@@ -13,7 +13,7 @@ This repository contains **Dockerfile** of [RSK Node](http://www.rsk.co/) for [D
 1. Install [Docker](https://docs.docker.com/engine/installation/).
 
 2. Build the image from the Dockerfile:
-  * MaiNet
+  * MainNet
 
   ```bash
  docker build -t mainnet -f Dockerfile.MainNet .
