@@ -1,0 +1,155 @@
+rskj (<V>~bionic) bionic; urgency=medium
+
+  * This release introduces improvements in synchronization, security fixes and minor issues resolutions detected in previous versions (#546)
+
+ -- RSK Release Signing Key <email address hidden>  Mon, 07 May 2018 10:52:00 -0300
+
+rskj (0.4.1~bionic) bionic; urgency=medium
+
+  * Introduce txpool JSON-RPC module (#471, #484, #497).
+
+  * Add support for 'pending' in eth_call JSON-RPC method (#490).
+
+  * Synchronization enhancements (#510, #507, #505).
+
+  * New block submissions methods (#486).
+
+  * Dns rebinding attack prevention (#459).
+
+  * Web3 filters improvements (#442).
+
+  * Logging improvements (#424, #423, #418). 
+
+ -- RSK Release Signing Key <support@rsk.co>  Tue, 20 Mar 2018 19:34:03 -0300
+
+rskj (0.4.0~bionic) bionic; urgency=medium
+
+  * Default configuration is now Mainnet (#349)
+
+  * Support for Ethereum Improvement Proposal 658 (#333)
+
+  * Trie serialization/deserialization improvements (#315)
+
+  * RETURNDATASIZE and RETURNDATACOPY new opcodes (#306)
+
+  * Bridge native contract improvements (#341, #346, #347, #378)
+
+  * Bug fixes (#301, #312, #314, #335)
+
+ -- RSK Release Signing Key <support@rsk.co>  Fri, 05 Jan 2018 14:59:08 -0300
+
+rskj (0.3.0~bionic) bionic; urgency=medium
+
+  * DUPN, SWAPN and TXINDEX new opcodes (#261).
+
+  * Addition of REVERT opcode (#230).
+
+  * Support for big integer modular exponentiation (#231).
+
+  * Other Ethereum Improvement Proposals have been implemented (#253, #267).
+
+  * Return status results for mined block submission (#227).
+
+  * New blockchain synchronization model (#220, #246, #276) is more stable and secure than previous version.
+
+  * Bug fixes (#234, #242, #243, #252, #270, #278, #282).
+
+ -- RSK Release Signing Key <support@rsk.co>  Mon, 10 Jul 2017 14:25:57 -0300
+
+rskj (0.2.5~bionic) bionic; urgency=medium
+
+  * Add peer scoring (#151).
+
+  * Replace Jetty with Netty as JSON-RPC Server (#156).
+
+  * Remove eth_addAccount web3 method (#159).
+
+  * Validate tx gas limit on pending state (#161).
+
+  * Fix issues with RLP border cases(#162).
+
+  * Validate uncles are not siblings (#163).
+
+  * Fix “out of memory” issues in VMTrace save (#165).
+
+ -- RSK Release Signing Key <support@rsk.co>  Mon, 10 Jul 2017 14:25:57 -0300
+
+rskj (0.2.4~bionic) bionic; urgency=medium
+
+  * Add support for IPv6 addresses in bootstrap nodes (#138).
+
+  * Use connection IP in peer discovery process (#137).
+
+  * Fix minor code smells identified by Sonar (#136).
+
+  * Refactor blockchain code to avoid reading full blocks (#145).
+
+  * Prevent double init of NodeMessageHandler (#149).
+
+  * Block gas limit calculation logic improvements (#135).
+
+  * Support for segwit txs in merge mining functionality (#152).
+
+ -- RSK Release Signing Key <support@rsk.co>  Mon, 10 Jul 2017 14:25:57 -0300
+
+rskj (0.2.3~bionic) bionic; urgency=medium
+
+  * Fixed issue that caused miners to eventually produce invalid blocks.
+
+ -- RSK Release Signing Key <support@rsk.co>  Mon, 10 Jul 2017 14:25:57 -0300
+
+rskj (0.2.2~bionic) bionic; urgency=medium
+
+  * Total difficulty loading when resuming from an existent local blockchain (#124).
+
+  * Already processed messages cache is cleared periodically (#111).
+
+  * Sending more blocks as a result of status message in sync (#113).
+
+  * Cache blocks in block store to avoid unnecessary disk accesses (#119).
+
+  * Additional performance improvements (#116, #118).
+
+  * Infos were not being properly updated on rebranching (#115).
+
+  * Fixed bug that was preventing txs from being processed due to incorrect nonce in certain scenarios (#121).
+
+  * Accept advanced blocks if sync does not make progress after some time (#127).
+
+ -- RSK Release Signing Key <support@rsk.co>  Wed, 28 Jun 2017 18:06:40 -0300
+
+rskj (0.2.1~bionic) bionic; urgency=medium
+
+  * Allow resume node preserving the state of the blockchain (PR #100).
+
+  * Peer discovery bug fixes (PR #98).
+
+  * Blockchain synchronization improvements (PRs #83, #88, #91, #92, #93).
+
+  * Changed permissons for “gradlew” file (PR #90).
+
+  * Default value for “details.inmemory.storage.limit” setting modified in sample configuration file (PR #89).
+
+  * Avoid reprocessing already received block and transaction messages (PR #87).
+
+  * Cleaned up unnecessary files from the repository (PR #86).
+
+  * New log messages in block validation logic (PR #85).
+
+  * Process only children blocks when adding a new block in Block Processor (PR #84).
+
+  * New RPC method “ext_dumpBlockchain” (PR #79).
+
+  * Code minor improvements (PR #78).
+
+  * Added the possibility of flushing the repository every N blocks (PR #77).
+
+  * Consider uncles in BlockStore.removeBlock method (PR #74).
+
+ -- RSK Release Signing Key <support@rsk.co>  Wed, 07 Jun 2017 14:51:11 -0300
+
+rskj (0.2.0.a~bionic) bionic; urgency=medium
+
+  * Initial release.
+
+ -- RSK Release Signing Key <support@rsk.co>  Fri, 26 May 2017 12:32:19 -0300
