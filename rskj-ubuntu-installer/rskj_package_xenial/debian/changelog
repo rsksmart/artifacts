@@ -1,3 +1,9 @@
+rskj (<V>~xenial) xenial; urgency=medium
+
+  * This release introduces improvements in synchronization, security fixes and minor issues resolutions detected in previous versions (#546)
+
+ -- RSK Release Signing Key <email address hidden>  Mon, 07 May 2018 10:52:00 -0300
+
 rskj (0.4.1~xenial) xenial; urgency=medium
 
   * Introduce txpool JSON-RPC module (#471, #484, #497).
