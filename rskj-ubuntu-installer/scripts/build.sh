@@ -110,5 +110,5 @@ mkdir -p $WORKSPACE/build/{xenial,trusty,bionic,artful}
 
 mv $WORKSPACE/source/trusty/rskj_$VERSION* $WORKSPACE/build/trusty/
 mv $WORKSPACE/source/xenial/rskj_$VERSION* $WORKSPACE/build/xenial/
-mv $WORKSPACE/source/bionic/rskj_$VERSION* $WORKSPACE/build/zesty/
+mv $WORKSPACE/source/bionic/rskj_$VERSION* $WORKSPACE/build/bionic/
 mv $WORKSPACE/source/artful/rskj_$VERSION* $WORKSPACE/build/artful/
