@@ -1,4 +1,4 @@
-rskj (<V>~bionic) bionic; urgency=medium
+rskj (0.4.2~bionic) bionic; urgency=medium
 
   * This release introduces improvements in synchronization, security fixes and minor issues resolutions detected in previous versions (#546)
 

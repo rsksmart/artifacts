@@ -1,4 +1,4 @@
-rskj (<V>~trusty) trusty; urgency=medium
+rskj (0.4.2~trusty) trusty; urgency=medium
 
   * This release introduces improvements in synchronization, security fixes and minor issues resolutions detected in previous versions (#546)
 
