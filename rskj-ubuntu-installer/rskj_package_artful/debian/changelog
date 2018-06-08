@@ -1,16 +1,3 @@
-rskj (0.4.3~artful) artful; urgency=medium
-  * Support for pub/sub using subscriptions (‘newHeads’ notification)  (#571)
-  
-  * Unify transactions validations (#554)
-  
-  * Node’s performance improvements (#514, #545, #551)
-  
-  * Configuration friendliness improvements and support for network specification through cli-args (#513, #530, #566, #569)
-  
-  * Bug fixes (#528, #553, #564)
-
- -- RSK Release Signing Key <support@rsk.co>  <DATE>
- 
 rskj (0.4.2~artful) artful; urgency=medium
 
 * This release introduces improvements in synchronization, security fixes and minor issues resolutions detected in previous versions (#546)
