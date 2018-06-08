@@ -1,4 +1,4 @@
-rskj (<V>~artful) artful; urgency=medium
+rskj (0.4.3~artful) artful; urgency=medium
   * Support for pub/sub using subscriptions (‘newHeads’ notification)  (#571)
   
   * Unify transactions validations (#554)
