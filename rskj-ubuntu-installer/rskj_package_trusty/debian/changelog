@@ -1,3 +1,13 @@
+rskj (0.4.4~artful) artful; urgency=medium
+  
+  * Remove tx execution on tx pool addition (#596)
+
+  * Added onBestBlock event (#587)
+
+  * Add networkId in peer discovery (#601)
+
+ -- RSK Release Signing Key <support@rsk.co>  Fri, 06 Jul 2018 10:49:11 -0300
+
 rskj (0.4.3~trusty) trusty; urgency=medium
 
   * Support for pub/sub using subscriptions ('newHeads' notification)  (#571)
