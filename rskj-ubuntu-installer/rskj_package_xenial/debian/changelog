@@ -6,7 +6,7 @@ rskj (<V>~xenial) xenial; urgency=medium
 
   * Add networkId in peer discovery (#601)
 
- -- RSK Release Signing Key <support@rsk.co>  <DATE>
+ -- RSK Release Signing Key <support@rsk.co>  Fri, 06 Jul 2018 10:49:11 -0300
 
 rskj (0.4.3~xenial) xenial; urgency=medium
 
