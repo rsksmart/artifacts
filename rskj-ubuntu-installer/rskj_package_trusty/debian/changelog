@@ -4,7 +4,7 @@ rskj (0.4.3~trusty) trusty; urgency=medium
   
   * Unify transactions validations (#554)
   
-  * Node√ï performance improvements (#514, #545, #551, #592)
+  * Node performance improvements (#514, #545, #551, #592)
   
   * Configuration friendliness improvements and support for network specification through cli-args (#513, #530, #566, #569)
   
