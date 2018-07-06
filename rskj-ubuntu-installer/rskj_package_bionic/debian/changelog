@@ -1,4 +1,4 @@
-rskj (<V>~bionic) bionic; urgency=medium
+rskj (0.4.4~bionic) bionic; urgency=medium
   
   * Remove tx execution on tx pool addition (#596)
 

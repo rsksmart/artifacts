@@ -1,4 +1,4 @@
-rskj (<V>~xenial) xenial; urgency=medium
+rskj (0.4.4~xenial) xenial; urgency=medium
   
   * Remove tx execution on tx pool addition (#596)
 
