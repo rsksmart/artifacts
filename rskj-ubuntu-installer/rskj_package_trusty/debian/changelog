@@ -1,4 +1,4 @@
-rskj (0.4.4~artful) artful; urgency=medium
+rskj (0.4.4~trusty) trusty; urgency=medium
   
   * Remove tx execution on tx pool addition (#596)
 
