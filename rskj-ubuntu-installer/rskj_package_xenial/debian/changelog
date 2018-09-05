@@ -1,3 +1,19 @@
+rskj (0.5.0~xenial) xenial; urgency=medium
+
+  * Performance and scalability improvements in Remasc native contract
+
+  * 2-way-peg unlimited whitelisting support
+
+  * Bridge methods local calls restrictions
+
+  * Bridge block locator performance improvements
+
+  * EXTCODESIZE support for native contracts
+
+  * New opcode STATICCALL
+
+ -- RSK Release Signing Key <support@rsk.co>  Wed, 05 Sep 2018 12:44:38 -0300
+
 rskj (0.4.4~xenial) xenial; urgency=medium
   
   * Remove tx execution on tx pool addition (#596)
