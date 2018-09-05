@@ -68,4 +68,9 @@ if [[ $RET =~ ^(mainnet|testnet|regtest)$ ]]; then
 	ln -s $CONF_PATH/$RET.conf $CONF_PATH/node.conf
 fi
 
+cat << EOF >> /etc/security/limits.conf
+rsk         hard    nofile      500000
+rsk         soft    nofile      500000
+EOF
+
 #DEBHELPER#
