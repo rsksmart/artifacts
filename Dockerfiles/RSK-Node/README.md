@@ -61,7 +61,8 @@ docker run -d --name regtest-node-01  -p 4444:4444 -p 30305:30305 regtest
 ```
 
 * Preserve the database
-In order to preseve the database, create the directory `~/rsk-testnet`, modify its permission to be writable by anyone and and add `` to one of the commands above. For example,
+
+In order to preseve the database between the container restart, create the directory `~/rsk-testnet`, modify its permission to be writable by anyone and and add `-v ~/rsk-testnet/:/var/lib/rsk/database` to one of the commands above. For example,
 
 ```bash
 mkdir ~/rsk-testnet
