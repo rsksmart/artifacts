@@ -1,3 +1,13 @@
+rskj (0.5.1~xenial) xenial; urgency=medium
+
+  * Collect NodeHandler reputation when purging (#641)
+
+  * Consider gasPrice in miner transactions selection algorithm (#651)
+
+  * Bug fixing and code clean up (#640, #642, #643, #644, #650, #653)
+
+ -- RSK Release Signing Key <support@rsk.co>  Wed, 03 Oct 2018 12:56:54 -0300
+
 rskj (0.5.0~xenial) xenial; urgency=medium
 
   * Performance and scalability improvements in Remasc native contract
