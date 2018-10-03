@@ -16,8 +16,9 @@ This repository contains **Dockerfile** of [RSK Node](http://www.rsk.co/) for [D
   * MainNet
 
   ```bash
- docker build -t mainnet -f Dockerfile.MainNet .
- ```
+  docker build -t mainnet -f Dockerfile.MainNet .
+  ```
+  
   * TestNet
 
   ```bash
@@ -29,6 +30,18 @@ This repository contains **Dockerfile** of [RSK Node](http://www.rsk.co/) for [D
   ```bash
   docker build -t regtest -f Dockerfile.RegTest .
   ```
+
+  * Configuration
+    
+    It is possible to include your own configuration files to the image.
+    In order to achieve this add, the following lines to `Dockerfile` before the `CMD` command.
+
+    ```
+    COPY logback.xml /etc/rsk/logback.xml
+    COPY testnet.conf /etc/rsk/testnet.conf
+    ```    
+   
+    Copy `logback.xml` and `testnet.conf` from `rskj-ubuntu-installer/config` directory to the current one. Modify them if it is necessary: e.g. put a rundom number as a hex string to `peer.privateKey` and `/bin/false` to `solc.path`. Run one of the command listed above to build the image.
 
 ### Usage Examples
 * MainNet
@@ -45,4 +58,21 @@ docker run -d --name testnet-node-01  -p 4444:4444 -p 50505:50505 testnet
 
 ```bash
 docker run -d --name regtest-node-01  -p 4444:4444 -p 30305:30305 regtest
+```
+
+* Preserve the database
+In order to preseve the database, create the directory `~/rsk-testnet`, modify its permission to be writable by anyone and and add `` to one of the commands above. For example,
+
+```bash
+mkdir ~/rsk-testnet
+
+chmod a+rwx ~/rsk-testnet
+
+docker run -d --name testnet-node-01  -p 4444:4444 -p 50505:50505 -v ~/rsk-testnet/:/var/lib/rsk/database testnet
+```
+
+* Get the latest logs
+
+```bash
+docker exec testnet-node-01 tail /var/log/rsk/rsk.log
 ```
