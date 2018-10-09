@@ -17,7 +17,7 @@ docker build -t buildmachine .
 
 Build
 ```bash
-docker run -v $(pwd):/rskj -w /rskj buildmachine:latest sh -c 'gpg --keyserver https://secchannel.rsk.co/release.asc --recv-keys 5DECF4415E3B8FA4 && gpg --finger 5DECF4415E3B8FA4 && gpg --verify SHA256SUMS.asc && sha256sum --check SHA256SUMS.asc && ./configure.sh && ./gradlew shadow reproducible'
+sudo docker run -v $(pwd):/rskj -w /rskj buildmachine:latest sh -c 'gpg --keyserver https://secchannel.rsk.co/release.asc --recv-keys 5DECF4415E3B8FA4 && gpg --finger 5DECF4415E3B8FA4 && gpg --verify SHA256SUMS.asc && sha256sum --check SHA256SUMS.asc && ./configure.sh && ./gradlew clean build -x test && sha256sum /rskj/rskj-core/build/libs/*'
 ```
 
 First of all, we have changed our working directory to the repository root, because we actually need Gradle and the root project in the Docker container as well
