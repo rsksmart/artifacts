@@ -1,3 +1,9 @@
+rskj (0.5.2~xenial) xenial; urgency=medium
+
+  * This release is only mandatory for users running RSK nodes on Testnet, it does not include any change from v0.5.1.
+
+ -- RSK Release Signing Key <support@rsk.co>  Tue, 09 Oct 2018 17:48:36 -0300
+
 rskj (0.5.1~xenial) xenial; urgency=medium
 
   * Collect NodeHandler reputation when purging (#641)
