@@ -1,3 +1,17 @@
+rskj (0.5.3~bionic) bionic; urgency=medium
+
+  * Add v, r and s EC values to JSON-RPC tx outputs (#661)
+
+  * Consider gas price for accepting tx pool replacements (#662)
+
+  * Improved disconnection collection recycling (#665)
+
+  * Don't close UDP channel on exception (#670)
+
+  * Unify contracts trie (#692)
+
+ -- RSK Release Signing Key <support@rsk.co>  Fri, 16 Nov 2018 15:02:31 -0300
+
 rskj (0.5.2~bionic) bionic; urgency=medium
 
   * This release is only mandatory for users running RSK nodes on Testnet, it does not include any change from v0.5.1.
