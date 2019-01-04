@@ -1,3 +1,13 @@
+rskj (0.6.0~trusty) trusty; urgency=medium
+
+  * RSK VM STATIC_CALL opcode has been aligned to Ethereum's implementation to enable support for Solidity 0.5.x contracts (Activated at Network Upgrade time).
+  
+  * Added support for method eth_gasPrice
+  
+  * Reported Websockets issue has been fixed (Github issue #700)
+
+ -- RSK Release Signing Key <support@rsk.co>  Fri, 04 Jan 2019 06:55:33 -0800
+
 rskj (0.5.3~trusty) trusty; urgency=medium
 
   * Add v, r and s EC values to JSON-RPC tx outputs (#661)
