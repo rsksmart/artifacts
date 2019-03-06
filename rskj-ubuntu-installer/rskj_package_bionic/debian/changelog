@@ -1,3 +1,9 @@
+rskj (0.6.1~bionic) bionic; urgency=medium
+
+  * This is a patch release version that improves the peer discovery protocol handshake logic to prevent IP spoofing and traffic amplification attacks.
+
+ -- RSK Release Signing Key <support@rsk.co>  Wed, 06 Mar 2019 09:42:27 -0300
+
 rskj (0.6.0~bionic) bionic; urgency=medium
 
   * RSK VM STATIC_CALL opcode has been aligned to Ethereum's implementation to enable support for Solidity 0.5.x contracts (Activated at Network Upgrade time).
