@@ -1,3 +1,21 @@
+rskj (0.6.2~bionic) bionic; urgency=medium
+
+  * Codebase refactors and cleanup (#803, #796, #798, #792, #786)
+
+  * Decrease blockchain storage size (#793)
+
+  * Performance improvements in onchain logs retrieval (#795)
+
+  * Trie improvements (#789, #783, #782, #719, #778)
+
+  * Added new information to VM trace output (#785)
+
+  * Bug fixes in txpool module responses (#771)
+
+  * Other minor bug fixes (#801)
+
+ -- RSK Release Signing Key <support@rsk.co>  Thu, 25 Apr 2019 15:59:48 -0300
+
 rskj (0.6.1~bionic) bionic; urgency=medium
 
   * This is a patch release version that improves the peer discovery protocol handshake logic to prevent IP spoofing and traffic amplification attacks.
