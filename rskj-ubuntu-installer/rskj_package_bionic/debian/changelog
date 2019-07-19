@@ -1,3 +1,17 @@
+rskj (1.0.0~bionic) bionic; urgency=medium
+
+  * New state internal data structure (Unitrie) introduces important performance and storage improvements.
+
+  * New opcodes included in RSK virtual machine (create2, shr, shl).
+
+  * New RSK native contracts (blockHeader, getBTCTransactionConfirmations.
+
+  * New transaction debugging rpc method (debug_traceTransaction).
+
+  * Security improvements and bug fixes.
+
+ -- RSK Release Signing Key <support@rsk.co>  Fri, 19 Jul 2019 11:44:40 -0300
+
 rskj (0.6.2~bionic) bionic; urgency=medium
 
   * Codebase refactors and cleanup (#803, #796, #798, #792, #786)
