@@ -1,3 +1,21 @@
+rskj (1.1.0~trusty) trusty; urgency=medium 
+
+  * Added JSON-RPC method 'eth_chainId' (#945).
+
+  * Added JSON-RPC method 'eth_chainId' (#945).
+
+  * Added support for 'pending' parameter in 'eth_getCode' JSON-RPC method (#970).
+
+  * Several minor improvements to JSON-RPC responses to make them Ethereum RPC API standard compliant (#934, #958, #971).
+
+  * Garbage collector (experimental version only) (#998).
+
+  * Added new RSK specific JSON-RPC methods including 'rsk_getRawBlockHeaderByHash', 'rsk_getRawTransactionReceiptByHash', among others (#1000).
+
+  * Security and bug fixing.
+
+ -- RSK Release Signing Key <support@rsk.co>  Tue, 15 Oct 2019 14:34:23 -0300
+
 rskj (1.0.0~trusty) trusty; urgency=medium
 
   * New state internal data structure (Unitrie) introduces important performance and storage improvements.
