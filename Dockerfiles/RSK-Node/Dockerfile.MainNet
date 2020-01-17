@@ -19,16 +19,18 @@ RUN \
   add-apt-repository -y ppa:rsksmart/rskj && \
   apt-get update && \
   (echo rskj shared/accepted-rsk-license-v1-1 select true | /usr/bin/debconf-set-selections )&& \
-  apt-get install -y --no-install-recommends rskj socat && \
+  apt-get install -y --no-install-recommends rskj nginx && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/*
 
 # Supervisod CONF
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY nginx.conf /etc/nginx/sites-enabled/default
 COPY rsk.sh /
 
 ## MAINNET
 EXPOSE 4455
+EXPOSE 4445
 EXPOSE 5050
 
 # Define default command.
