@@ -1,3 +1,13 @@
+rskj (1.2.0~trusty) trusty; urgency=medium
+ 
+ * Ethereum compatibility fixes in logs (#1108).
+ 
+ * Concurrent operations improvements (#1109, #1116).
+ 
+ * Several security improvements.
+ 
+ -- RSK Release Signing Key <support@rsk.co> Thu, 09 Jan 2020 15:20:09 +0000
+
 rskj (1.1.0~trusty) trusty; urgency=medium 
 
   * Added JSON-RPC method 'eth_chainId' (#945).
