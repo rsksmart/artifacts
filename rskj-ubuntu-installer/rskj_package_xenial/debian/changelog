@@ -1,3 +1,9 @@
+rskj (1.2.1~xenial) xenial; urgency=medium
+
+  * This release improves block validation logic and enforces Armadillo checks by making this security feature part of the consensus rules. 
+
+ -- RSK Release Signing Key <support@rsk.co>  Tue, 28 Jan 2020 17:27:40 -0300
+
 rskj (1.2.0~xenial) xenial; urgency=medium
  
  * Ethereum compatibility fixes in logs (#1108).
