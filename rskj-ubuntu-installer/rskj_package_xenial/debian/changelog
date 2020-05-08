@@ -1,3 +1,15 @@
+rskj (2.0.1~xenial) xenial; urgency=medium
+
+  * Garbage Collector v0.2, includes improvements to the previously released garbage collection feature (beta version*).
+  * Import sync v0.1 feature will let users sync their nodes in a fraction of the time currently required (beta version*)
+  * Added support for segwit (P2SH-P2WPKH) peg-in transactions in RSK 2-way peg (after network upgrade activation).
+  * Additions to the 2WP process (locking cap and improvements to the return of funds logic) in preparation to the whitelisting mechanism removal (after network upgrade activation).
+  * Added support for logs subscription in eth_subscribe JSON RPC method.
+  * Added ECADD, ECMUL and PairingCheck precompiled contracts (after network upgrade activation).
+  * Added CHAINID, SELFBALANCE and EXTCODEHASH opcodes (after network upgrade activation).
+
+ -- RSK Release Signing Key <support@rsk.co>  Fri, 08 May 2020 12:45:20 -0300
+
 rskj (1.2.1~xenial) xenial; urgency=medium
 
   * This release improves block validation logic and enforces Armadillo checks by making this security feature part of the consensus rules. 
