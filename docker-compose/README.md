@@ -4,5 +4,9 @@ This `docker-compose.yml` uses the [official docker hub images of rsksmart](http
 
 ## Example Usage
 
+For running
 > docker-compose up
 
+For debugging/check current sync logs
+> docker ps (Verify the container id you want to check)
+>  docker exec -it <container-id> tail -f /var/log/rsk/rsk.log 

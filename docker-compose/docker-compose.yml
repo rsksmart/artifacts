@@ -10,7 +10,7 @@ services:
     volumes:
       - rsk-testnet:/var/lib/rsk/database/testnet
     networks:
-      - pocket
+      - rsk
 
   rsk-mainnet:
     image: rsksmart/rskj-standalone:latest
@@ -20,12 +20,12 @@ services:
     volumes:
       - rsk-mainnet:/var/lib/rsk/database/mainnet
     networks:
-      - pocket
+      - rsk
  
 volumes:
   rsk-mainnet:
   rsk-testnet:
 
 networks:
-  pocket:
+  rsk:
     driver: bridge
