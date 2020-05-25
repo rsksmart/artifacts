@@ -1,0 +1,31 @@
+version: '2.1'
+
+services:
+ 
+  rsk-testnet:
+    image: rsksmart/rskj-testnet:latest
+    expose:
+      - "4444"
+      - "50505"
+    volumes:
+      - rsk-testnet:/var/lib/rsk/database/testnet
+    networks:
+      - pocket
+
+  rsk-mainnet:
+    image: rsksmart/rskj-standalone:latest
+    expose:
+      - "4444"
+      - "5050"
+    volumes:
+      - rsk-mainnet:/var/lib/rsk/database/mainnet
+    networks:
+      - pocket
+ 
+volumes:
+  rsk-mainnet:
+  rsk-testnet:
+
+networks:
+  pocket:
+    driver: bridge
