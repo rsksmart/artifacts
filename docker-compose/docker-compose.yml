@@ -3,7 +3,10 @@ version: '2.1'
 services:
  
   rsk-testnet:
-    image: rsksmart/rskj-testnet:latest
+    image: rsk-testnet 
+    build:
+      context: ../Dockerfiles/RSK-Node/
+      dockerfile: Dockerfile.MainNet
     expose:
       - "4444"
       - "50505"
@@ -13,7 +16,10 @@ services:
       - rsk
 
   rsk-mainnet:
-    image: rsksmart/rskj-standalone:latest
+    image: rsk-mainnet 
+    build:
+      context: ../Dockerfiles/RSK-Node/
+      dockerfile: Dockerfile.MainNet
     expose:
       - "4444"
       - "5050"
