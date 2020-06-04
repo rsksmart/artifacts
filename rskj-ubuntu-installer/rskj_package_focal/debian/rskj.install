@@ -1,0 +1,7 @@
+src/testnet.conf etc/rsk
+src/regtest.conf etc/rsk
+src/mainnet.conf etc/rsk
+src/logback.xml etc/rsk
+src/rsk.jar usr/share/rsk
+src/copyright usr/share/doc/rskj
+src/rsk.service lib/systemd/system
