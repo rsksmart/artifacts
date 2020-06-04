@@ -31,7 +31,7 @@ mkdir -p $WORKSPACE/source
 
 mkdir -p $WORKSPACE/source/{bionic,xenial,trusty,focal}/rskj_$VERSION
 
-cp -r ~/artifacts/rskj-ubuntu-installer/rskj_package_focal/. $WORKSPACE/source/trusty/rskj_$VERSION/
+cp -r ~/artifacts/rskj-ubuntu-installer/rskj_package_focal/. $WORKSPACE/source/focal/rskj_$VERSION/
 cp -r ~/artifacts/rskj-ubuntu-installer/rskj_package_bionic/. $WORKSPACE/source/bionic/rskj_$VERSION/
 cp -r ~/artifacts/rskj-ubuntu-installer/rskj_package_xenial/. $WORKSPACE/source/xenial/rskj_$VERSION/
 cp -r ~/artifacts/rskj-ubuntu-installer/rskj_package_trusty/. $WORKSPACE/source/trusty/rskj_$VERSION/
@@ -110,4 +110,4 @@ mkdir -p $WORKSPACE/build/{xenial,trusty,bionic,focal}
 mv $WORKSPACE/source/trusty/rskj_$VERSION* $WORKSPACE/build/trusty/
 mv $WORKSPACE/source/xenial/rskj_$VERSION* $WORKSPACE/build/xenial/
 mv $WORKSPACE/source/bionic/rskj_$VERSION* $WORKSPACE/build/bionic/
-mv $WORKSPACE/source/bionic/rskj_$VERSION* $WORKSPACE/build/focal/
+mv $WORKSPACE/source/focal/rskj_$VERSION* $WORKSPACE/build/focal/
