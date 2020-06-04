@@ -22,7 +22,7 @@ if [ ! -d $LOG_PATH ]; then
 fi
 
 if [ ! -d $HOME_PATH ]; then
-	mkdir /var/lib/rsk
+	mkdir $HOME_PATH 
 fi
 
 chown rsk:rsk $HOME_PATH -R
