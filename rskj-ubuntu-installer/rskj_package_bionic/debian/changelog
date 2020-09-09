@@ -1,3 +1,14 @@
+rskj (2.1.0~bionic) bionic; urgency=medium
+
+  * Transaction relay improvements and handling of pending transactions fixes (#1266, #1134, #1253)
+  * New persistent storage for logs bloom reduces execution times for eth_getLogs method (#1208)
+  * New command-line tools enable local export and import of blocks (see this blog post for more info) (#1226)
+  * Peer discovery now works for nodes behind NAT routers (#1262)
+  * The eth_compile family of methods has been removed (#1211)
+  * Other performance improvements (#1227, #1285)
+
+ -- RSK Release Signing Key <support@rsk.co>  Wed, 09 Sep 2020 14:55:30 -0300
+
 rskj (2.0.1~bionic) bionic; urgency=medium
 
   * Garbage Collector v0.2, includes improvements to the previously released garbage collection feature (beta version*).
