@@ -1,3 +1,12 @@
+rskj (2.2.0~focal) focal; urgency=medium
+
+  * Add Content-Type field in JSON RPC responses (#1390).
+  * Consider minimum gas price in eth_gasPrice method (#1389).
+  * On-the-fly block blooms cache for faster events retrieval (#1384).
+  * Fix v value in JSON RPC transaction result (#1382).
+
+ -- RSK Release Signing Key <support@rsk.co>  Fri, 05 Feb 2021 15:05:27 -0300
+
 rskj (2.1.0~focal) focal; urgency=medium
 
   * Transaction relay improvements and handling of pending transactions fixes (#1266, #1134, #1253)
