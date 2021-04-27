@@ -1,0 +1,37 @@
+version: '2.1'
+
+services:
+ 
+  rsk-testnet:
+    image: rsk-testnet 
+    build:
+      context: ../Dockerfiles/RSK-Node/
+      dockerfile: Dockerfile.MainNet
+    expose:
+      - "4444"
+      - "50505"
+    volumes:
+      - rsk-testnet:/var/lib/rsk/database
+    networks:
+      - rsk
+
+  rsk-mainnet:
+    image: rsk-mainnet 
+    build:
+      context: ../Dockerfiles/RSK-Node/
+      dockerfile: Dockerfile.MainNet
+    expose:
+      - "4444"
+      - "5050"
+    volumes:
+      - rsk-mainnet:/var/lib/rsk/database
+    networks:
+      - rsk
+ 
+volumes:
+  rsk-mainnet:
+  rsk-testnet:
+
+networks:
+  rsk:
+    driver: bridge
