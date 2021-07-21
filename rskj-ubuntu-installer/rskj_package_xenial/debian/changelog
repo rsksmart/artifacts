@@ -1,3 +1,22 @@
+rskj (3.0.0~xenial) xenial; urgency=medium
+
+  * Add BLAKE2 compression function F precompile (RSKIP153).
+  * Enable 2WP peg-in transactions to any RSK address (RSKIP170).
+  * Flyover protocol consensus changes (RSKIP176).
+  * BTC-RSK timestamp linking protection (RSKIP179).
+  * Enable refunds for 2WP peg-out transactions with invalid amounts (RSKIP185).
+  * Time-locked emergency multisignature (RSKIP201).
+  * Reduced 2WP peg-in and peg-out minimum amounts (RSKIP219).
+  * Open Bitcoin blockchain oracle (RSKIP220).
+  * Improvements and compatibility fixes at the JSON-RPC interface.
+  * New rewind feature added to CLI tool.
+  * Block propagation enhancements.
+  * Node performance improvements.
+  * Use native library for recovery signature.
+  * Add Java11 support.
+
+ -- RSK Release Signing Key <support@rsk.co>  Wed, 21 Jul 2021 11:38:56 -0300
+
 rskj (2.2.0~xenial) xenial; urgency=medium
 
   * Add Content-Type field in JSON RPC responses (#1390).
