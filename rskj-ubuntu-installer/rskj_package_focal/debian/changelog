@@ -1,3 +1,12 @@
+rskj (3.2.0~focal) focal; urgency=medium
+
+  * Improved message queue expiration policy (#1610)
+  * Added support for pending parameter in eth_getBlockByNumber JSON-RPC method (#1627)
+  * JSON-RPC compatibility fixes (#1623, #1629)
+  * Fixed eth_isSyncing method which was not working as expected (#1618)
+  * Introduced gas exactimation enhancements to the eth_estimateGas method (#1548)
+  * Mining rate limiting and updated minimum block difficulty for RSK Testnet (#1615, #1671)
+
 rskj (3.0.0~focal) focal; urgency=medium
 
   * Add BLAKE2 compression function F precompile (RSKIP153).
