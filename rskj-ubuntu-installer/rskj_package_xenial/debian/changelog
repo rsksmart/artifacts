@@ -1,3 +1,25 @@
+rskj (3.3.0~xenial) xenial; urgency=medium
+
+  * Fix web3_sha3 method for non-hex encoded strings in #1637
+  * JSON-RPC compatibility fixes in #1659
+  * eth_getLogs method performance improvements in #1650
+  * Mitigated db inconsistency issue after improper node shutdown in #1660
+  * Enabled fast block propagation mode by default in #1677
+  * Added tracing options to debug_traceTransaction method in #1644
+
+  -- RSK Release Signing Key <support@rsk.co>  Fri, 25 Mar 2022 21:10:46 +0000
+
+rskj (3.2.0~xenial) xenial; urgency=medium
+
+  * Improved message queue expiration policy (#1610)
+  * Added support for pending parameter in eth_getBlockByNumber JSON-RPC method (#1627)
+  * JSON-RPC compatibility fixes (#1623, #1629)
+  * Fixed eth_isSyncing method which was not working as expected (#1618)
+  * Introduced gas exactimation enhancements to the eth_estimateGas method (#1548)
+  * Mining rate limiting and updated minimum block difficulty for RSK Testnet (#1615, #1671)
+
+  -- RSK Release Signing Key <support@rsk.co>  Wed, 2 Mar 2022 11:38:56 -0300
+
 rskj (3.0.0~xenial) xenial; urgency=medium
 
   * Add BLAKE2 compression function F precompile (RSKIP153).
