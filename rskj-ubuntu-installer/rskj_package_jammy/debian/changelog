@@ -1,17 +1,4 @@
-rskj (4.0.0~xenial) xenial; urgency=medium
-
-  * Bridge peg-out batching (RSKIP-271)
-  * New deserialization method for Flyover refund addresses (RSKIP-284)
-  * Adjust minimum block difficulty on Testnet (RSKIP-290)
-  * Add method getActivePowpegRedeemScript to the Bridge contract and perform additional Flyover peg-in validations (RSKIP-293)
-  * Limit the number of inputs to include in a migration transaction (RSKIP-294)
-  * Increase max timestamp difference between BTC and RSK blocks for Testnet (RSKIP-297)
-  * Increased accountSlots config (#1763)
-  * Disable sco, debug, and trace rpc modules by default
-
- -- RSK Release Signing Key <support@iovlabs.org>  Fri, 05 Aug 2022 11:30:00 -0300
-
-rskj (3.3.0~xenial) xenial; urgency=medium
+rskj (3.3.0~jammy) jammy; urgency=medium
 
   * Fix web3_sha3 method for non-hex encoded strings in #1637
   * JSON-RPC compatibility fixes in #1659
@@ -22,7 +9,7 @@ rskj (3.3.0~xenial) xenial; urgency=medium
 
   -- RSK Release Signing Key <support@rsk.co>  Fri, 25 Mar 2022 21:10:46 +0000
 
-rskj (3.2.0~xenial) xenial; urgency=medium
+rskj (3.2.0~jammy) jammy; urgency=medium
 
   * Improved message queue expiration policy (#1610)
   * Added support for pending parameter in eth_getBlockByNumber JSON-RPC method (#1627)
@@ -33,7 +20,7 @@ rskj (3.2.0~xenial) xenial; urgency=medium
 
   -- RSK Release Signing Key <support@rsk.co>  Wed, 2 Mar 2022 11:38:56 -0300
 
-rskj (3.0.0~xenial) xenial; urgency=medium
+rskj (3.0.0~jammy) jammy; urgency=medium
 
   * Add BLAKE2 compression function F precompile (RSKIP153).
   * Enable 2WP peg-in transactions to any RSK address (RSKIP170).
@@ -52,7 +39,7 @@ rskj (3.0.0~xenial) xenial; urgency=medium
 
  -- RSK Release Signing Key <support@rsk.co>  Wed, 21 Jul 2021 11:38:56 -0300
 
-rskj (2.2.0~xenial) xenial; urgency=medium
+rskj (2.2.0~jammy) jammy; urgency=medium
 
   * Add Content-Type field in JSON RPC responses (#1390).
   * Consider minimum gas price in eth_gasPrice method (#1389).
@@ -61,7 +48,7 @@ rskj (2.2.0~xenial) xenial; urgency=medium
 
  -- RSK Release Signing Key <support@rsk.co>  Fri, 05 Feb 2021 15:05:27 -0300
 
-rskj (2.1.0~xenial) xenial; urgency=medium
+rskj (2.1.0~jammy) jammy; urgency=medium
 
   * Transaction relay improvements and handling of pending transactions fixes (#1266, #1134, #1253)
   * New persistent storage for logs bloom reduces execution times for eth_getLogs method (#1208)
@@ -72,7 +59,7 @@ rskj (2.1.0~xenial) xenial; urgency=medium
 
  -- RSK Release Signing Key <support@rsk.co>  Wed, 09 Sep 2020 14:55:30 -0300
 
-rskj (2.0.1~xenial) xenial; urgency=medium
+rskj (2.0.1~jammy) jammy; urgency=medium
 
   * Garbage Collector v0.2, includes improvements to the previously released garbage collection feature (beta version*).
   * Import sync v0.1 feature will let users sync their nodes in a fraction of the time currently required (beta version*)
@@ -83,24 +70,23 @@ rskj (2.0.1~xenial) xenial; urgency=medium
   * Added CHAINID, SELFBALANCE and EXTCODEHASH opcodes (after network upgrade activation).
 
  -- RSK Release Signing Key <support@rsk.co>  Fri, 08 May 2020 12:45:20 -0300
+rskj (1.2.1~jammy) jammy; urgency=medium
 
-rskj (1.2.1~xenial) xenial; urgency=medium
-
-  * This release improves block validation logic and enforces Armadillo checks by making this security feature part of the consensus rules. 
+  * This release improves block validation logic and enforces Armadillo checks by making this security feature part of the consensus rules.
 
  -- RSK Release Signing Key <support@rsk.co>  Tue, 28 Jan 2020 17:27:40 -0300
 
-rskj (1.2.0~xenial) xenial; urgency=medium
- 
+rskj (1.2.0~jammy) jammy; urgency=medium
+
  * Ethereum compatibility fixes in logs (#1108).
- 
+
  * Concurrent operations improvements (#1109, #1116).
- 
+
  * Several security improvements.
- 
+
  -- RSK Release Signing Key <support@rsk.co> Thu, 09 Jan 2020 15:20:09 +0000
 
-rskj (1.1.0~xenial) xenial; urgency=medium 
+rskj (1.1.0~jammy) jammy; urgency=medium 
 
   * Added JSON-RPC method 'eth_chainId' (#945).
   
@@ -118,7 +104,7 @@ rskj (1.1.0~xenial) xenial; urgency=medium
 
  -- RSK Release Signing Key <support@rsk.co>  Tue, 15 Oct 2019 14:34:23 -0300
 
-rskj (1.0.0~xenial) xenial; urgency=medium
+rskj (1.0.0~jammy) jammy; urgency=medium
 
   * New state internal data structure (Unitrie) introduces important performance and storage improvements.
 
@@ -132,7 +118,7 @@ rskj (1.0.0~xenial) xenial; urgency=medium
 
  -- RSK Release Signing Key <support@rsk.co>  Fri, 19 Jul 2019 11:44:40 -0300
 
-rskj (0.6.2~xenial) xenial; urgency=medium
+rskj (0.6.2~jammy) jammy; urgency=medium
 
   * Codebase refactors and cleanup (#803, #796, #798, #792, #786)
 
@@ -150,23 +136,23 @@ rskj (0.6.2~xenial) xenial; urgency=medium
 
  -- RSK Release Signing Key <support@rsk.co>  Thu, 25 Apr 2019 15:59:48 -0300
 
-rskj (0.6.1~xenial) xenial; urgency=medium
+rskj (0.6.1~jammy) jammy; urgency=medium
 
   * This is a patch release version that improves the peer discovery protocol handshake logic to prevent IP spoofing and traffic amplification attacks.
 
  -- RSK Release Signing Key <support@rsk.co>  Wed, 06 Mar 2019 09:42:27 -0300
 
-rskj (0.6.0~xenial) xenial; urgency=medium
+rskj (0.6.0~jammy) jammy; urgency=medium
 
   * RSK VM STATIC_CALL opcode has been aligned to Ethereum's implementation to enable support for Solidity 0.5.x contracts (Activated at Network Upgrade time).
-  
+
   * Added support for method eth_gasPrice
-  
+
   * Reported Websockets issue has been fixed (Github issue #700)
 
  -- RSK Release Signing Key <support@rsk.co>  Fri, 04 Jan 2019 06:55:33 -0800
 
-rskj (0.5.3~xenial) xenial; urgency=medium
+rskj (0.5.3~jammy) jammy; urgency=medium
 
   * Add v, r and s EC values to JSON-RPC tx outputs (#661)
 
@@ -180,13 +166,13 @@ rskj (0.5.3~xenial) xenial; urgency=medium
 
  -- RSK Release Signing Key <support@rsk.co>  Fri, 16 Nov 2018 15:02:31 -0300
 
-rskj (0.5.2~xenial) xenial; urgency=medium
+rskj (0.5.2~jammy) jammy; urgency=medium
 
   * This release is only mandatory for users running RSK nodes on Testnet, it does not include any change from v0.5.1.
 
  -- RSK Release Signing Key <support@rsk.co>  Tue, 09 Oct 2018 17:48:36 -0300
-
-rskj (0.5.1~xenial) xenial; urgency=medium
+ 
+rskj (0.5.1~jammy) jammy; urgency=medium
 
   * Collect NodeHandler reputation when purging (#641)
 
@@ -195,8 +181,8 @@ rskj (0.5.1~xenial) xenial; urgency=medium
   * Bug fixing and code clean up (#640, #642, #643, #644, #650, #653)
 
  -- RSK Release Signing Key <support@rsk.co>  Wed, 03 Oct 2018 12:56:54 -0300
-
-rskj (0.5.0~xenial) xenial; urgency=medium
+ 
+rskj (0.5.0~jammy) jammy; urgency=medium
 
   * Performance and scalability improvements in Remasc native contract
 
@@ -212,7 +198,7 @@ rskj (0.5.0~xenial) xenial; urgency=medium
 
  -- RSK Release Signing Key <support@rsk.co>  Wed, 05 Sep 2018 12:44:38 -0300
 
-rskj (0.4.4~xenial) xenial; urgency=medium
+rskj (0.4.4~jammy) jammy; urgency=medium
   
   * Remove tx execution on tx pool addition (#596)
 
@@ -222,7 +208,7 @@ rskj (0.4.4~xenial) xenial; urgency=medium
 
  -- RSK Release Signing Key <support@rsk.co>  Fri, 06 Jul 2018 10:49:11 -0300
 
-rskj (0.4.3~xenial) xenial; urgency=medium
+rskj (0.4.3~jammy) jammy; urgency=medium
 
   * Support for pub/sub using subscriptions ('newHeads' notification)  (#571)
   
@@ -236,13 +222,13 @@ rskj (0.4.3~xenial) xenial; urgency=medium
 
  -- RSK Release Signing Key <support@rsk.co>  Fri, 08 Jun 2018 16:12:03 -0300  
 
-rskj (0.4.2~xenial) xenial; urgency=medium
+rskj (0.4.2~jammy) jammy; urgency=medium
 
   * This release introduces improvements in synchronization, security fixes and minor issues resolutions detected in previous versions (#546)
 
  -- RSK Release Signing Key <email address hidden>  Mon, 07 May 2018 10:52:00 -0300
 
-rskj (0.4.1~xenial) xenial; urgency=medium
+rskj (0.4.1~jammy) jammy; urgency=medium
 
   * Introduce txpool JSON-RPC module (#471, #484, #497).
 
@@ -260,7 +246,7 @@ rskj (0.4.1~xenial) xenial; urgency=medium
 
  -- RSK Release Signing Key <support@rsk.co>  Tue, 20 Mar 2018 19:34:03 -0300
 
-rskj (0.4.0~xenial) xenial; urgency=medium
+rskj (0.4.0~jammy) jammy; urgency=medium
 
   * Default configuration is now Mainnet (#349)
 
@@ -276,7 +262,7 @@ rskj (0.4.0~xenial) xenial; urgency=medium
 
  -- RSK Release Signing Key <support@rsk.co>  Fri, 05 Jan 2018 14:59:08 -0300
 
-rskj (0.3.0~xenial) xenial; urgency=medium
+rskj (0.3.0~jammy) jammy; urgency=medium
 
   * DUPN, SWAPN and TXINDEX new opcodes (#261).
 
@@ -294,7 +280,7 @@ rskj (0.3.0~xenial) xenial; urgency=medium
 
  -- RSK Release Signing Key <support@rsk.co>  Mon, 10 Jul 2017 14:25:57 -0300
 
-rskj (0.2.5~xenial) xenial; urgency=medium
+rskj (0.2.5~jammy) jammy; urgency=medium
 
   * Add peer scoring (#151).
 
@@ -304,7 +290,7 @@ rskj (0.2.5~xenial) xenial; urgency=medium
 
   * Validate tx gas limit on pending state (#161).
 
-  * Fix issues with RLP border cases (#162).
+  * Fix issues with RLP border cases(#162).
 
   * Validate uncles are not siblings (#163).
 
@@ -312,7 +298,7 @@ rskj (0.2.5~xenial) xenial; urgency=medium
 
  -- RSK Release Signing Key <support@rsk.co>  Mon, 10 Jul 2017 14:25:57 -0300
 
-rskj (0.2.4~xenial) xenial; urgency=medium
+rskj (0.2.4~jammy) jammy; urgency=medium
 
   * Add support for IPv6 addresses in bootstrap nodes (#138).
 
@@ -330,13 +316,13 @@ rskj (0.2.4~xenial) xenial; urgency=medium
 
  -- RSK Release Signing Key <support@rsk.co>  Mon, 10 Jul 2017 14:25:57 -0300
 
-rskj (0.2.3~xenial) xenial; urgency=medium
+rskj (0.2.3~jammy) jammy; urgency=medium
 
   * Fixed issue that caused miners to eventually produce invalid blocks.
 
  -- RSK Release Signing Key <support@rsk.co>  Mon, 10 Jul 2017 14:25:57 -0300
 
-rskj (0.2.2~xenial) xenial; urgency=medium
+rskj (0.2.2~jammy) jammy; urgency=medium
 
   * Total difficulty loading when resuming from an existent local blockchain (#124).
 
@@ -356,7 +342,7 @@ rskj (0.2.2~xenial) xenial; urgency=medium
 
  -- RSK Release Signing Key <support@rsk.co>  Wed, 28 Jun 2017 18:06:40 -0300
 
-rskj (0.2.1~xenial) xenial; urgency=medium
+rskj (0.2.1~jammy) jammy; urgency=medium
 
   * Allow resume node preserving the state of the blockchain (PR #100).
 
@@ -386,7 +372,7 @@ rskj (0.2.1~xenial) xenial; urgency=medium
 
  -- RSK Release Signing Key <support@rsk.co>  Wed, 07 Jun 2017 14:51:11 -0300
 
-rskj (0.2.0.a~xenial) xenial; urgency=medium
+rskj (0.2.0.a~jammy) jammy; urgency=medium
 
   * Initial release.
 
