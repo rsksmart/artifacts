@@ -29,11 +29,10 @@ HOME=$(eval echo "~$USER")
 WORKSPACE=$(echo "$HOME/$VERSION")
 mkdir -p $WORKSPACE/source
 
-mkdir -p $WORKSPACE/source/{bionic,xenial,jammy,focal}/rskj_$VERSION
+mkdir -p $WORKSPACE/source/{bionic,jammy,focal}/rskj_$VERSION
 
 cp -r ~/artifacts/rskj-ubuntu-installer/rskj_package_focal/. $WORKSPACE/source/focal/rskj_$VERSION/
 cp -r ~/artifacts/rskj-ubuntu-installer/rskj_package_bionic/. $WORKSPACE/source/bionic/rskj_$VERSION/
-cp -r ~/artifacts/rskj-ubuntu-installer/rskj_package_xenial/. $WORKSPACE/source/xenial/rskj_$VERSION/
 cp -r ~/artifacts/rskj-ubuntu-installer/rskj_package_jammy/. $WORKSPACE/source/jammy/rskj_$VERSION/
 
 sed -i "s|<V>|${VERSION}|g" $WORKSPACE/source/focal/rskj_$VERSION/debian/control
@@ -48,13 +47,9 @@ sed -i "s|<V>|${VERSION}|g" $WORKSPACE/source/jammy/rskj_$VERSION/debian/control
 sed -i "s|<V>|${VERSION}|g" $WORKSPACE/source/jammy/rskj_$VERSION/debian/changelog
 sed -i "s|<DATE>|${RFCDATE}|g" $WORKSPACE/source/jammy/rskj_$VERSION/debian/changelog
 
-sed -i "s|<V>|${VERSION}|g" $WORKSPACE/source/xenial/rskj_$VERSION/debian/control
-sed -i "s|<V>|${VERSION}|g" $WORKSPACE/source/xenial/rskj_$VERSION/debian/changelog
-sed -i "s|<DATE>|${RFCDATE}|g" $WORKSPACE/source/xenial/rskj_$VERSION/debian/changelog
 
 cp $FILE_NAME_NODE $WORKSPACE/source/focal/rskj_$VERSION/src/rsk.jar
 cp $FILE_NAME_NODE $WORKSPACE/source/bionic/rskj_$VERSION/src/rsk.jar
-cp $FILE_NAME_NODE $WORKSPACE/source/xenial/rskj_$VERSION/src/rsk.jar
 cp $FILE_NAME_NODE $WORKSPACE/source/jammy/rskj_$VERSION/src/rsk.jar
 
 cp ~/artifacts/rskj-ubuntu-installer/config/regtest.conf $WORKSPACE/source/focal/rskj_$VERSION/src/regtest.conf
@@ -75,12 +70,6 @@ cp ~/artifacts/rskj-ubuntu-installer/config/testnet.conf $WORKSPACE/source/jammy
 cp ~/artifacts/rskj-ubuntu-installer/config/logback.xml $WORKSPACE/source/jammy/rskj_$VERSION/src/
 cp ~/artifacts/rskj-ubuntu-installer/init-scripts/rsk.service-node $WORKSPACE/source/jammy/rskj_$VERSION/src/rsk.service
 
-cp ~/artifacts/rskj-ubuntu-installer/config/testnet.conf $WORKSPACE/source/xenial/rskj_$VERSION/src/testnet.conf
-cp ~/artifacts/rskj-ubuntu-installer/config/regtest.conf $WORKSPACE/source/xenial/rskj_$VERSION/src/regtest.conf
-cp ~/artifacts/rskj-ubuntu-installer/config/mainnet.conf $WORKSPACE/source/xenial/rskj_$VERSION/src/mainnet.conf
-cp ~/artifacts/rskj-ubuntu-installer/config/logback.xml $WORKSPACE/source/xenial/rskj_$VERSION/src/
-cp ~/artifacts/rskj-ubuntu-installer/init-scripts/rsk.service-node $WORKSPACE/source/xenial/rskj_$VERSION/src/rsk.service
-
 echo "####################################################"
 echo "#                   BUILD JAMMY                    #"
 echo "####################################################"
@@ -99,15 +88,8 @@ echo "####################################################"
 cd $WORKSPACE/source/bionic/rskj_$VERSION
 debuild -us -uc -S
 
-echo "####################################################"
-echo "#                   BUILD XENIAL                   #"
-echo "####################################################"
-cd $WORKSPACE/source/xenial/rskj_$VERSION
-debuild -us -uc -S
+mkdir -p $WORKSPACE/build/{bionic,jammy,focal}
 
-mkdir -p $WORKSPACE/build/{xenial,bionic,jammy,focal}
-
-mv $WORKSPACE/source/xenial/rskj_$VERSION* $WORKSPACE/build/xenial/
 mv $WORKSPACE/source/bionic/rskj_$VERSION* $WORKSPACE/build/bionic/
 mv $WORKSPACE/source/jammy/rskj_$VERSION* $WORKSPACE/build/jammy/
 mv $WORKSPACE/source/focal/rskj_$VERSION* $WORKSPACE/build/focal/

@@ -1,3 +1,15 @@
+rskj (4.1.0~focal) focal; urgency=medium
+
+  * Introduced a new peer reputation system in #1737, #1739, #1740, #1745, #1750, #1772, and #1782 [experimental].
+  * Introduced two new JSON-RPC tracing methods: trace_get and trace_filter in #1711, and #1744.
+  * Added support for RocksDb storage library in #1703 [experimental]. See RSK Developers Portal for more information.
+  * Fixed corner case bug in eth_estimateGas JSON-RPC method in #1803.
+  * Accept websocket connections without requiring the websocket suffix in the URL path in #1753.
+  * Improved the eth_gasPrice method by fetching historical gas prices from DB at node startup in #1724.
+  * Added Content-Length and Connection headers to JSON-RPC responses, solving issues Hardhat users had when interacting with RSKj, in #1836.
+
+ -- RSK Release Signing Key <support@iovlabs.org>  Fri, 09 Sep 2022 12:29:38 -0300
+
 rskj (4.0.0~focal) focal; urgency=medium
 
   * Bridge peg-out batching (RSKIP-271)

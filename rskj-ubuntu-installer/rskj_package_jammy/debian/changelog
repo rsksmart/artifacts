@@ -1,3 +1,28 @@
+rskj (4.1.0~jammy) jammy; urgency=medium
+
+  * Introduced a new peer reputation system in #1737, #1739, #1740, #1745, #1750, #1772, and #1782 [experimental].
+  * Introduced two new JSON-RPC tracing methods: trace_get and trace_filter in #1711, and #1744.
+  * Added support for RocksDb storage library in #1703 [experimental]. See RSK Developers Portal for more information.
+  * Fixed corner case bug in eth_estimateGas JSON-RPC method in #1803.
+  * Accept websocket connections without requiring the websocket suffix in the URL path in #1753.
+  * Improved the eth_gasPrice method by fetching historical gas prices from DB at node startup in #1724.
+  * Added Content-Length and Connection headers to JSON-RPC responses, solving issues Hardhat users had when interacting with RSKj, in #1836.
+
+ -- RSK Release Signing Key <support@iovlabs.org>  Fri, 09 Sep 2022 12:29:38 -0300
+
+rskj (4.0.0~jammy) jammy; urgency=medium
+  
+  * Bridge peg-out batching (RSKIP-271)
+  * New deserialization method for Flyover refund addresses (RSKIP-284)
+  * Adjust minimum block difficulty on Testnet (RSKIP-290)
+  * Add method getActivePowpegRedeemScript to the Bridge contract and perform additional Flyover peg-in validations (RSKIP-293)
+  * Limit the number of inputs to include in a migration transaction (RSKIP-294)
+  * Increase max timestamp difference between BTC and RSK blocks for Testnet (RSKIP-297)
+  * Increased accountSlots config (#1763)
+  * Disable sco, debug, and trace rpc modules by default
+
+ -- RSK Release Signing Key <support@iovlabs.org>  Fri, 05 Aug 2022 11:30:00 -0300
+
 rskj (3.3.0~jammy) jammy; urgency=medium
 
   * Fix web3_sha3 method for non-hex encoded strings in #1637
