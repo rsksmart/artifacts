@@ -1,3 +1,10 @@
+rskj (4.1.1~bionic) bionic; urgency=medium
+
+  * Align RSK P2SH redeem script with Bitcoin Core standard transactions checks (RSKIP-353)
+  * Adjust the number of block confirmations for a PowPeg migration period (RSKIP-357)
+
+ -- RSK Release Signing Key <support@iovlabs.org>  Mon, 26 Dec 2022 13:00:38 -0300
+
 rskj (4.1.0~bionic) bionic; urgency=medium
 
   * Introduced a new peer reputation system in #1737, #1739, #1740, #1745, #1750, #1772, and #1782 [experimental].
