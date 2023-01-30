@@ -1,3 +1,13 @@
+rskj (4.2.0~jammy) jammy; urgency=medium
+
+  * Introduced a command-line interface tool to migrate between LevelDb and RocksDb storage libraries in #1834.
+  * Added support for ARM CPUs on Linux OS in #1892. It requires using the RocksDb storage library.
+  * Allow wildcard to hosts config to accept all hosts in #1800.
+  * Fixed issue with eth_call JSON-RPC method when executed for a pending block in #1915.
+  * Added support for Java 17 in #1812.
+
+ -- RSK Release Signing Key <support@iovlabs.org>  Fri, 27 Jan 2023 13:53:48 -0300
+
 rskj (4.1.1~jammy) jammy; urgency=medium
 
   * Align RSK P2SH redeem script with Bitcoin Core standard transactions checks (RSKIP-353)
