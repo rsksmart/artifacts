@@ -1,3 +1,22 @@
+rskj (4.3.0~bionic) bionic; urgency=medium
+
+  * Update netty
+  * Openrpc doc
+  * Junit5 update
+  * Upgrade jackson
+  * Updated log for forced virtual gas subtraction
+  * Signature cache
+  * Add CodeQL workflow for GitHub code scanning
+  * Rewind fixes
+  * Not dispose Options instance in RocksDbDataSource until db is closed
+  * Validating transaction signature for send transaction methods
+  * Adding Correlation id to the logs
+  * Add constraints to request payload
+  * Enable rate limit and peer scoring features by default
+  * Sets default locale when converting numbers to strings in FormatUtils
+
+ -- RSK Release Signing Key <support@iovlabs.org>  Fri, 03 Mar 2023 11:40:54 -0300
+
 rskj (4.2.0~bionic) bionic; urgency=medium
 
   * Introduced a command-line interface tool to migrate between LevelDb and RocksDb storage libraries in #1834.
