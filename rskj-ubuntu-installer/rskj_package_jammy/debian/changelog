@@ -1,3 +1,13 @@
+rskj (4.4.0~jammy) jammy; urgency=medium
+
+  * Support named arguments in node’s CLI tools
+  * Added JSON RPC timeouts & transaction gas cap limit validations
+  * Improved eth_getLogs JSON RPC method performance
+  * Enable cache.states.persist-snapshot setting by default
+  * Included the type field in tx receipts and tx result responses for Ethereum libraries compatibility
+
+ -- RSK Release Signing Key <support@iovlabs.org>  Thu, 27 Apr 2023 13:23:47 -0300
+
 rskj (4.3.0~jammy) jammy; urgency=medium
 
   * Update netty
