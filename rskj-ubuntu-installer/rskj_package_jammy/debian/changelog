@@ -1,3 +1,15 @@
+rskj (5.0.0~jammy) jammy; urgency=medium
+
+  * Transaction gas price cap (RSKIP-252)
+  * Peg-out events improvements (RSKIP-326)
+  * Reestablish the number of block confirmations for a PowPeg migration period (RSKIP-374)
+  * Use the pegout creation transaction hash as the key in the map structure that stores the pegout transactions waiting for signatures (RSKIP-375)
+  * Store the last retired PowPeg standard P2SH script (RSKIP-377)
+  * Increase POWpeg activation age (RSKIP-383)
+  * Bridge method getEstimatedFeesForNextPegOutEvent improvement (RSKIP-385)
+
+ -- RSK Release Signing Key <support@iovlabs.org>  Fri, 16 Jun 2023 10:38:43 -0300
+
 rskj (4.4.0~jammy) jammy; urgency=medium
 
   * Support named arguments in node’s CLI tools
