@@ -1,3 +1,13 @@
+rskj (5.1.0~bionic) bionic; urgency=medium
+
+  * Fixed issues with the evm_reset JSON-RPC method in #2024.
+  * Introduced configurable limits for the eth_getLogs JSON-RPC method in #2035.
+  * Introduced configurable limit for JSON-RPC responses size in #1997.
+  * New rsk_flush JSON-RPC method lets users flush the node’s databases to disk without interrupting the node in #1856.
+  * Allow specifying VM options when running RSKj in a docker container in #1998.
+
+ -- RSK Release Signing Key <support@iovlabs.org>  Tue, 15 Aug 2023 16:09:00 -0300
+
 rskj (5.0.0~bionic) bionic; urgency=medium
 
   * Transaction gas price cap (RSKIP-252) 
