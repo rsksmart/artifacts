@@ -1,3 +1,10 @@
+rskj (5.2.0~jammy) jammy; urgency=medium
+
+  * Make RocksDb the default database library in #2063.
+  * Change default networkCidr config value in #2070.
+
+ -- RSK Release Signing Key <support@iovlabs.org>  Tue, 05 Sep 2023 12:11:25 -0300
+
 rskj (5.1.0~jammy) jammy; urgency=medium
 
   * Fixed issues with the evm_reset JSON-RPC method in #2024.
