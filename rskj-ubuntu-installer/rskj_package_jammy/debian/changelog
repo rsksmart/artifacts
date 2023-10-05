@@ -1,3 +1,15 @@
+rskj (5.3.0~jammy) jammy; urgency=medium
+
+  * Introducing support for blockNumber and blockID arguments in the eth_estimateGas JSON-RPC method in #2080.
+  * Ignore replaced transactions in pending transactions gas cost calculations in #2105.
+  * Fix the response format on the eth_hashrate JSON-RPC method in #2074.
+  * Get rid of manual command-line arguments parsing and introduce --help and --version command-line flags using the Picocli framework in #2027.
+  * Show the rsk_protocolVersion JSON-RPC method return value as hexadecimal in #2134.
+  * Support the input field in JSON-RPC requests for compatibility with the Web3js framework library in #2075.
+  * Increased receipts cache size and reduced blooms block size in #2127.
+
+ -- RSK Release Signing Key <support@iovlabs.org>  Thu, 05 Oct 2023 11:05:40 -0300
+
 rskj (5.2.0~jammy) jammy; urgency=medium
 
   * Make RocksDb the default database library in #2063.
