@@ -1,0 +1,78 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: ubuntu
+    tag: 22.04
+
+inputs:
+- name: artifacts 
+- name: signing-key 
+
+params:
+  GPG_PASS: ((gpg-passphrase))
+  PPA_USER: rsk-release
+  PPA_NAME: ppa:rsksmart/rskj
+  RSKJ_BASE_URL: https://github.com/rsksmart/rskj/releases/download
+  GPG_KEY_ID: F99E900DA9C917D697236F37DC997F7CEB706E14
+  GPG_KEYGRIP: F3AB17AE85C620C2CDBF4C991821FB7B253075CA
+
+run:
+  path: bash
+  args: 
+  - -ceux
+  - |
+    apt-get update -y
+    apt-get install -y \
+      gnupg2 git debhelper lintian dpkg-dev devscripts dput tree
+
+    export GPG_TTY=$(tty)
+
+    chmod 400 signing-key/${GPG_KEY_ID}.key
+    echo "$GPG_PASS" | gpg --batch --passphrase-fd 0 --import signing-key/${GPG_KEY_ID}.key
+    echo "${GPG_KEY_ID}:6:" | gpg --import-ownertrust
+
+    echo allow-preset-passphrase > $HOME/.gnupg/gpg-agent.conf
+    gpgconf --kill gpg-agent
+    eval $(gpg-agent --daemon)
+    echo $GPG_PASS | /usr/lib/gnupg/gpg-preset-passphrase --preset $GPG_KEYGRIP
+
+    cd artifacts 
+    echo "In ./artifacts"
+
+    echo "Reading release tag.  Expected format eg: CODENAME-0.0.1"
+
+    RSKJ_RELEASE=$(git tag --points-at HEAD | grep '[A-Z]\+-.*') || { echo "Invalid Tag"; exit 2 }
+    IFS=- read TAG_RSKJ_CODENAME TAG_RSKJ_VERSION <<< "$RSKJ_RELEASE"
+
+    RSKJ_JAR=rskj-core-$RSKJ_VERSION-$RSKJ_CODENAME-all.jar
+
+    RSKJ_JAR_URL=$RSKJ_BASE_URL/$RSKJ_CODENAME-$RSKJ_VERSION/$RSKJ_JAR
+    RSKJ_JAR_CHECKSUM=$RSKJ_BASE_URL/$RSKJ_CODENAME-$RSKJ_VERSION/SHA256SUMS.asc
+
+    cd ./rskj-ubuntu-installer/
+
+    echo "Downloading RSKJ release $RSKJ_CODENAME version $RSKJ_VERSION"
+
+    curl -L -o $RSKJ_JAR $RSKJ_JAR_URL 
+    curl -L -o SHA256SUMS.asc $RSKJ_JAR_CHECKSUM
+    sha256sum -c SHA256SUMS.asc
+
+    echo "Build ppa packages"
+
+    scripts/build_from_concourse.sh $RSKJ_JAR $RSKJ_VERSION 
+
+    cd $HOME/$RSKJ_VERSION/build
+
+    for distro in bionic focal jammy; do
+      cd $HOME/$RSKJ_VERSION/build/$distro
+      rskj_distro_changes=rskj_$RSKJ_VERSION\~${distro}_source.changes
+
+      echo Signing $rskj_distro_changes
+      debsign $rskj_distro_changes
+
+      echo ========= Uploading to $PPA_NAME ============
+      USER=$PPA_USER dput $PPA_NAME $rskj_distro_changes
+    done
