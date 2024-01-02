@@ -80,6 +80,8 @@
     <logger name="blockchain" level="INFO"/>
     <logger name="blockprocessor" level="ERROR"/>
     <logger name="state" level="INFO"/>
+    <logger name="co.rsk.net.discovery.PeerExplorer" level="INFO" />
+    <logger name="co.rsk.net.discovery.NodeChallengeManager" level="INFO" />
 
     <root level="DEBUG">
         <appender-ref ref="stdout"/>
