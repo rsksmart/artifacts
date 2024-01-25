@@ -1,3 +1,14 @@
+rskj (5.4.0~bionic) bionic; urgency=medium
+
+  * Make the eth_protocolVersion method return values in hexadecimal format in #2134.
+  * Upgrade RocksDB library to v7.10.2 in #2138.
+  * Improve JSON-RPC API error handling in #2121, #2130, #2132, and #2140.
+  * Improve the eth_gasPrice method by suggesting minimum gas prices when blocks are not full in #2176.
+  * Use cached repository track when initializing precompiled contracts in #2162.
+  * Return properly encoded values for non-existent keys in the eth_getStorageAt method in #2229.
+
+ -- RSK Release Signing Key <support@iovlabs.org>  Thu, 25 Jan 2024 17:28:51 -0300
+
 rskj (5.3.0~bionic) bionic; urgency=medium
 
   * Introducing support for blockNumber and blockID arguments in the eth_estimateGas JSON-RPC method in #2080.
