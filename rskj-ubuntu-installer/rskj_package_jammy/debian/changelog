@@ -1,3 +1,16 @@
+rskj (6.0.0~jammy) jammy; urgency=medium
+
+  * Introduce PUSH0 opcode (RSKIP-398)
+  * Calldata gas cost reduction (RSKIP-400)
+  * Introduce BASEFEE opcode (RSKIP-412)
+  * Introduce GetCallStackDepth precompiled contract (RSKIP-203)
+  * Bridge peg-out and migration transactions index (RSKIP-379)
+  * Set version 2 to PowPeg migration transactions (RSKIP-376)
+  * Fix pegnatories address derivation from public keys (RSKIP-415)
+  * Avoid transactions to be reverted when Bridge method calls from smart contracts return an empty response (RSKIP-417)
+
+ -- RSK Release Signing Key <support@iovlabs.org>  Tue, 5 Mar 2024 17:28:51 -0300
+
 rskj (5.4.0~jammy) jammy; urgency=medium
 
   * Make the eth_protocolVersion method return values in hexadecimal format in #2134.
