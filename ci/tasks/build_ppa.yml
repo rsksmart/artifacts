@@ -58,7 +58,8 @@ run:
 
     curl -L -o $RSKJ_JAR $RSKJ_JAR_URL 
     curl -L -o SHA256SUMS.asc $RSKJ_JAR_CHECKSUM
-    sha256sum -c SHA256SUMS.asc
+
+    cat SHA256SUMS.asc | grep $RSKJ_JAR | sha256sum -c
 
     echo "Build ppa packages"
 
