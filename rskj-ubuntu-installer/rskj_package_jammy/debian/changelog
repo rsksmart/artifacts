@@ -9,7 +9,7 @@ rskj (6.0.0~jammy) jammy; urgency=medium
   * Fix pegnatories address derivation from public keys (RSKIP-415)
   * Avoid transactions to be reverted when Bridge method calls from smart contracts return an empty response (RSKIP-417)
 
- -- RSK Release Signing Key <support@iovlabs.org>  Tue, 5 Mar 2024 17:28:51 -0300
+ -- IOV Labs Support <support@iovlabs.org>  Tue, 5 Mar 2024 17:28:51 -0300
 
 rskj (5.4.0~jammy) jammy; urgency=medium
 
