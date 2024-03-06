@@ -44,7 +44,7 @@ run:
 
     echo "Reading release tag.  Expected format eg: CODENAME-0.0.1"
 
-    RSKJ_RELEASE=$(git tag --points-at HEAD | grep '[A-Z]+-.*') || ( echo "Invalid Tag"; exit 2 )
+    RSKJ_RELEASE=$(git tag --points-at HEAD | grep '[A-Z]\+-.*') || ( echo "Invalid Tag"; exit 2 )
     IFS=- read TAG_RSKJ_CODENAME TAG_RSKJ_VERSION <<< "$RSKJ_RELEASE"
 
     RSKJ_JAR=rskj-core-$RSKJ_VERSION-$RSKJ_CODENAME-all.jar
