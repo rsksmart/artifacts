@@ -1,3 +1,13 @@
+rskj (6.1.0~bionic) bionic; urgency=medium
+
+  * Added new rsk_getStorageBytesAt method in #2191.
+  * Added new eth_getPendingTransactions method in #2227.
+  * Weighted percentile for gas price calculations in #2215.
+  * Configurable gas price buffer for gas price calculations in #2220.
+  * JSON-RPC general bug fixes in #2229, #2243, and #2278.
+
+ -- IOV Labs Support <support@iovlabs.org>  Tue, 10 Apr 2024 17:28:51 -0300
+
 rskj (6.0.0~bionic) bionic; urgency=medium
 
   * Introduce PUSH0 opcode (RSKIP-398)
