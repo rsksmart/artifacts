@@ -1,3 +1,12 @@
+rskj (6.2.0~bionic) bionic; urgency=medium
+
+  *  Added revert data to an eth_call response by @jurajpiar in #2281
+  *  Support input field in eth_call method requests by @Vovchyk in #2293
+  *  Load active peers from previous sessions at node start-up by @asoto-iov in #2230
+  *  Enable genesis block load from an external file by @jurajpiar in #2266
+
+ -- IOV Labs Support <support@iovlabs.org>  Wed, 29 May 2024 04:20:00 -0300
+
 rskj (6.1.0~bionic) bionic; urgency=medium
 
   * Added new rsk_getStorageBytesAt method in #2191.
