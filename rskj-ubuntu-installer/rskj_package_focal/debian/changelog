@@ -1,3 +1,11 @@
+rskj (6.3.0~focal) focal; urgency=medium
+
+  *  Added the to field in JSON-RPC trace method responses by @rmoreliovlabs in #2431
+  *  Updated the getCode method so it does not make a copy of the underlying array by @rmoreliovlabs in #2365
+  *  Introduced logback level enhancements by @Vovchyk in #2415
+
+ -- IOV Labs Support <support@iovlabs.org>  Wed, 3 Jul 2024 16:45:00 -0300
+
 rskj (6.2.0~focal) focal; urgency=medium
 
   *  Added revert data to an eth_call response by @jurajpiar in #2281
