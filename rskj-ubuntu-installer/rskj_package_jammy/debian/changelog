@@ -1,3 +1,9 @@
+rskj (6.3.1~jammy) jammy; urgency=medium
+
+  *  Bridge Bitcoin block chainwork up to 12 Bytes. (RSKIP-434) 
+
+ -- IOV Labs Support <support@iovlabs.org>  Wed, 10 Jul 2024 10:43:30 -0300
+
 rskj (6.3.0~jammy) jammy; urgency=medium
 
   *  Added the to field in JSON-RPC trace method responses by @rmoreliovlabs in #2431
