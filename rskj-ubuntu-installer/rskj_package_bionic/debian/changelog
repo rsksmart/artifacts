@@ -1,3 +1,14 @@
+rskj (6.4.0~bionic) bionic; urgency=medium
+
+  * Fiat-stable minimum gas price configuration for mining pools (disabled by default), introduced by @Vovchyk and @asoto-iov in #2310 and #2807.
+  * Added the effectiveGasPrice field in transaction receipts, by @fmacleal in #2556.
+  * Updated the minimum supported Java LTS version to Java 17, with added support for Java 21, by @Vovchyk in #2624 and #2640.
+  * Modified the web3_clientVersion response to include the node’s Java version, by @rmoreliovlabs in #2679.
+  * Upgraded the Jackson dependency to version 2.15.4, by @Vovchyk in #2715.
+  * Refactored bridge classes by @wilmerrootstock, @marcos-iov, and @julia-zack in #2309, #2423, #2433, #2545, #2603, #2672, and #2681.
+ 
+ -- IOV Labs Support <support@iovlabs.org>  Wed, 13 Nov 2024 16:27:30 -0300
+
 rskj (6.3.1~bionic) bionic; urgency=medium
 
   *  Bridge Bitcoin block chainwork up to 12 Bytes. (RSKIP-434) 
