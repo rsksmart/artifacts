@@ -1,3 +1,12 @@
+rskj (6.5.0~focal) focal; urgency=medium
+
+  * Added the debug_traceBlockByNumber RPC method, by @Vovchyk in #2809.
+  * Added support for the callTracer trace in the debug_traceTransaction, debug_traceBlockByHash, and debug_traceBlockByNumber RPC methods, by @asoto-iov in #2839.
+  * Added support for null values in the to and from input parameters of RPC methods, by @Vovchyk in #2868.
+  * Handle reverted transactions in the eth_estimateGas method to align with Ethereum client behavior, by @rmoreliovlabs in #2846.
+
+ -- IOV Labs Support <support@iovlabs.org>  Wed, 9 Dec 2024 17:31:30 -0300
+
 rskj (6.4.0~focal) focal; urgency=medium
 
   * Fiat-stable minimum gas price configuration for mining pools (disabled by default), introduced by @Vovchyk and @asoto-iov in #2310 and #2807.
