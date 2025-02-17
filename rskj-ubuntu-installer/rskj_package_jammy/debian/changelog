@@ -1,3 +1,18 @@
+rskj (7.0.0~jammy) jammy; urgency=medium
+
+  * PowPeg Spendability Validation Protocol (RSKIP-419)
+  * Express the amount value in wei for peg-out related events (RSKIP-427)
+  * New pegout creation event including UTXO outpoint values (RSKIP-428)
+  * Limit the maximum size of initcode and apply extra gas cost for every 32-byte chunk of initcode (RSKIP-438)
+  * MCOPY instruction (RSKIP-445)
+  * Transient storage opcodes (RSKIP-446)
+  * Prevent address creation on failed CREATE/CREATE2 operations (RSKIP-453)
+  * Support bitcoin blocks with chain work up to 32 unsigned bytes (RSKIP-454)
+  * Mark rejected peg-ins as processed (RSKIP-459)
+  * Ignore non-standard outputs when searching for the witness commitment hash (RSKIP-460)
+
+ -- IOV Labs Support <support@iovlabs.org>  Mon, 17 Feb 2025 10:35:30 -0300
+
 rskj (6.5.0~jammy) jammy; urgency=medium                                                                                                                            
 
   * Added the debug_traceBlockByNumber RPC method, by @Vovchyk in #2809.                                                                                              
