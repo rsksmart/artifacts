@@ -40,7 +40,7 @@
     <logger name="blockvalidator" level="INFO"/>
     <logger name="blocksyncservice" level="TRACE"/>
     <logger name="blockexecutor" level="INFO"/>
-    <logger name="general" level="DEBUG"/>
+    <logger name="general" level="TRACE"/>
     <logger name="gaspricetracker" level="ERROR"/>
     <logger name="web3" level="INFO"/>
     <logger name="repository" level="ERROR"/>
