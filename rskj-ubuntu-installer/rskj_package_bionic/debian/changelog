@@ -1,3 +1,18 @@
+rskj (7.1.0~bionic) bionic; urgency=medium
+
+  * Introduced SnapSync, a new fast synchronization mode designed to accelerate node bootstrapping [Experimental].
+  * By @julianlen, @Vovchyk, @asoto-iov, and others in #2233
+  * Enhanced Fiat Stable MinGasPrice — added support for defining a valid minimum and maximum gas price range.
+  * By @asoto-iov in #2922
+  * Improved upgrade awareness — added a warning message when a disabled network upgrade is detected.
+  * By @rmoreliovlabs in #3038
+  * JSON-RPC compatibility — added the mixHash and nonce fields to the block DTO, defaulting to zero for compatibility with Ethereum-based tools.
+  * By @Vovchyk in #2909 and #3135
+  * RLP validation enhancement — RLP.getNextElementIndex now throws an exception if an invalid pos value is provided.
+  * By @rmoreliovlabs in #3052
+
+ -- IOV Labs Support <support@iovlabs.org>  Mon, 25 May 2025 04:20:00 -0300
+
 rskj (7.0.0~bionic) bionic; urgency=medium
 
   * PowPeg Spendability Validation Protocol (RSKIP-419)
