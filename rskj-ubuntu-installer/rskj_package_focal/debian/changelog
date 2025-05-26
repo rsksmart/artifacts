@@ -1,4 +1,4 @@
-rskj (7.1.0~focal ) focal; urgency=medium
+rskj (7.1.0~focal) focal; urgency=medium
 
   * Introduced SnapSync, a new fast synchronization mode designed to accelerate node bootstrapping [Experimental].
   * By @julianlen, @Vovchyk, @asoto-iov, and others in #2233
