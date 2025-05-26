@@ -1,4 +1,4 @@
-rskj (7.1.0~bionic) bionic; urgency=medium
+rskj (7.1.0~jammy) jammy; urgency=medium
 
   * Introduced SnapSync, a new fast synchronization mode designed to accelerate node bootstrapping [Experimental].
   * By @julianlen, @Vovchyk, @asoto-iov, and others in #2233
