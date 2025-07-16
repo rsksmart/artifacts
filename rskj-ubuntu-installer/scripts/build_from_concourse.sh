@@ -35,11 +35,12 @@ echo "Workspace here"
 echo $WORKSPACE
 mkdir -p $WORKSPACE/source
 
-mkdir -p $WORKSPACE/source/{bionic,jammy,focal}/rskj_$VERSION
+mkdir -p $WORKSPACE/source/{bionic,jammy,focal,noble}/rskj_$VERSION
 
 cp -r rskj_package_focal/. $WORKSPACE/source/focal/rskj_$VERSION/
 cp -r rskj_package_bionic/. $WORKSPACE/source/bionic/rskj_$VERSION/
 cp -r rskj_package_jammy/. $WORKSPACE/source/jammy/rskj_$VERSION/
+cp -r rskj_package_jammy/. $WORKSPACE/source/noble/rskj_$VERSION/
 
 sed -i "s|<V>|${VERSION}|g" $WORKSPACE/source/focal/rskj_$VERSION/debian/control
 sed -i "s|<V>|${VERSION}|g" $WORKSPACE/source/focal/rskj_$VERSION/debian/changelog
@@ -53,10 +54,14 @@ sed -i "s|<V>|${VERSION}|g" $WORKSPACE/source/jammy/rskj_$VERSION/debian/control
 sed -i "s|<V>|${VERSION}|g" $WORKSPACE/source/jammy/rskj_$VERSION/debian/changelog
 sed -i "s|<DATE>|${RFCDATE}|g" $WORKSPACE/source/jammy/rskj_$VERSION/debian/changelog
 
+sed -i "s|<V>|${VERSION}|g" $WORKSPACE/source/noble/rskj_$VERSION/debian/control
+sed -i "s|<V>|${VERSION}|g" $WORKSPACE/source/noble/rskj_$VERSION/debian/changelog
+sed -i "s|<DATE>|${RFCDATE}|g" $WORKSPACE/source/noble/rskj_$VERSION/debian/changelog
 
 cp $FILE_NAME_NODE $WORKSPACE/source/focal/rskj_$VERSION/src/rsk.jar
 cp $FILE_NAME_NODE $WORKSPACE/source/bionic/rskj_$VERSION/src/rsk.jar
 cp $FILE_NAME_NODE $WORKSPACE/source/jammy/rskj_$VERSION/src/rsk.jar
+cp $FILE_NAME_NODE $WORKSPACE/source/noble/rskj_$VERSION/src/rsk.jar
 
 cp config/regtest.conf $WORKSPACE/source/focal/rskj_$VERSION/src/regtest.conf
 cp config/mainnet.conf $WORKSPACE/source/focal/rskj_$VERSION/src/mainnet.conf
@@ -76,6 +81,18 @@ cp config/testnet.conf $WORKSPACE/source/jammy/rskj_$VERSION/src/testnet.conf
 cp config/logback.xml $WORKSPACE/source/jammy/rskj_$VERSION/src/
 cp init-scripts/rsk.service-node $WORKSPACE/source/jammy/rskj_$VERSION/src/rsk.service
 
+cp config/regtest.conf $WORKSPACE/source/noble/rskj_$VERSION/src/regtest.conf
+cp config/mainnet.conf $WORKSPACE/source/noble/rskj_$VERSION/src/mainnet.conf
+cp config/testnet.conf $WORKSPACE/source/noble/rskj_$VERSION/src/testnet.conf
+cp config/logback.xml $WORKSPACE/source/noble/rskj_$VERSION/src/
+cp init-scripts/rsk.service-node $WORKSPACE/source/noble/rskj_$VERSION/src/rsk.service
+
+echo "####################################################"
+echo "#                   BUILD NOBLE                    #"
+echo "####################################################"
+cd $WORKSPACE/source/noble/rskj_$VERSION
+debuild -us -uc -S
+
 echo "####################################################"
 echo "#                   BUILD JAMMY                    #"
 echo "####################################################"
@@ -94,8 +111,9 @@ echo "####################################################"
 cd $WORKSPACE/source/bionic/rskj_$VERSION
 debuild -us -uc -S
 
-mkdir -p $WORKSPACE/build/{bionic,jammy,focal}
+mkdir -p $WORKSPACE/build/{bionic,jammy,focal,noble}
 
 mv $WORKSPACE/source/bionic/rskj_$VERSION* $WORKSPACE/build/bionic/
 mv $WORKSPACE/source/jammy/rskj_$VERSION* $WORKSPACE/build/jammy/
 mv $WORKSPACE/source/focal/rskj_$VERSION* $WORKSPACE/build/focal/
+mv $WORKSPACE/source/focal/rskj_$VERSION* $WORKSPACE/build/noble/
