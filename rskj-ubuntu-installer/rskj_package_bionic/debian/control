@@ -8,6 +8,6 @@ Homepage: http://www.rsk.co
 
 Package: rskj
 Architecture: any
-Depends: debconf, openjdk-8-jre, ${misc:Depends}
+Depends: debconf, openjdk-17-jre, ${misc:Depends}
 Description: Java implementation of RSK node
  RSKj is a Java implementation of the RSK protocol. http://www.rsk.co
