@@ -67,7 +67,7 @@ run:
 
     cd $HOME/$RSKJ_VERSION/build
 
-    for distro in bionic focal jammy; do
+    for distro in bionic focal jammy noble; do
       cd $HOME/$RSKJ_VERSION/build/$distro
       rskj_distro_changes=rskj_$RSKJ_VERSION\~${distro}_source.changes
 
