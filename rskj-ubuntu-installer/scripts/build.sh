@@ -29,7 +29,7 @@ HOME=$(eval echo "~$USER")
 WORKSPACE=$(echo "$HOME/$VERSION")
 mkdir -p $WORKSPACE/source
 
-mkdir -p $WORKSPACE/source/{bionic,jammy,focal}/rskj_$VERSION
+mkdir -p $WORKSPACE/source/{bionic,jammy,focal,noble}/rskj_$VERSION
 
 cp -r ~/artifacts/rskj-ubuntu-installer/rskj_package_focal/. $WORKSPACE/source/focal/rskj_$VERSION/
 cp -r ~/artifacts/rskj-ubuntu-installer/rskj_package_bionic/. $WORKSPACE/source/bionic/rskj_$VERSION/
@@ -110,4 +110,4 @@ mkdir -p $WORKSPACE/build/{bionic,jammy,focal,noble}
 mv $WORKSPACE/source/bionic/rskj_$VERSION* $WORKSPACE/build/bionic/
 mv $WORKSPACE/source/jammy/rskj_$VERSION* $WORKSPACE/build/jammy/
 mv $WORKSPACE/source/focal/rskj_$VERSION* $WORKSPACE/build/focal/
-mv $WORKSPACE/source/focal/rskj_$VERSION* $WORKSPACE/build/noble/
+mv $WORKSPACE/source/noble/rskj_$VERSION* $WORKSPACE/build/noble/
