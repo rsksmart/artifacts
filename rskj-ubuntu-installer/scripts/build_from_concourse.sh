@@ -116,4 +116,4 @@ mkdir -p $WORKSPACE/build/{bionic,jammy,focal,noble}
 mv $WORKSPACE/source/bionic/rskj_$VERSION* $WORKSPACE/build/bionic/
 mv $WORKSPACE/source/jammy/rskj_$VERSION* $WORKSPACE/build/jammy/
 mv $WORKSPACE/source/focal/rskj_$VERSION* $WORKSPACE/build/focal/
-mv $WORKSPACE/source/focal/rskj_$VERSION* $WORKSPACE/build/noble/
+mv $WORKSPACE/source/noble/rskj_$VERSION* $WORKSPACE/build/noble/
