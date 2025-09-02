@@ -40,7 +40,7 @@ mkdir -p $WORKSPACE/source/{bionic,jammy,focal,noble}/rskj_$VERSION
 cp -r rskj_package_focal/. $WORKSPACE/source/focal/rskj_$VERSION/
 cp -r rskj_package_bionic/. $WORKSPACE/source/bionic/rskj_$VERSION/
 cp -r rskj_package_jammy/. $WORKSPACE/source/jammy/rskj_$VERSION/
-cp -r rskj_package_jammy/. $WORKSPACE/source/noble/rskj_$VERSION/
+cp -r rskj_package_noble/. $WORKSPACE/source/noble/rskj_$VERSION/
 
 sed -i "s|<V>|${VERSION}|g" $WORKSPACE/source/focal/rskj_$VERSION/debian/control
 sed -i "s|<V>|${VERSION}|g" $WORKSPACE/source/focal/rskj_$VERSION/debian/changelog
