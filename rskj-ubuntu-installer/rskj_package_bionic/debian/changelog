@@ -4,14 +4,14 @@ rskj (8.0.0~bionic) bionic; urgency=medium
   * Precompiled contracts for +/* on Secp256k1 (RSKIP-516)
   * Network Upgrade: Reed: RSKIP 518
 
- -- IOV Labs Support <support@iovlabs.org> Tue, 2 Sep 2025 17:55:30 -0300
+ -- IOV Labs Support <support@iovlabs.org>  Tue, 2 Sep 2025 17:55:30 -0300
 
 rskj (7.2.0~bionic) bionic; urgency=medium
 
   * LogIndex compatibility enhancement — aligned logIndex handling with Ethereum clients by making it block-relative. By @asoto-iov in #3111.
   * State override feature — introduced the state override feature, enabling developers to simulate transactions with custom account code, storage, or balances during an eth_call, without altering the actual blockchain state. By @asoto-iov in #3079, #3137, and #3104.
 
- -- IOV Labs Support <support@iovlabs.org> Wed, 10 Jul 2025 19:43:30 -0300
+ -- IOV Labs Support <support@iovlabs.org>  Wed, 10 Jul 2025 19:43:30 -0300
 
 rskj (7.1.0~bionic) bionic; urgency=medium
 
