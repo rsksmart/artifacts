@@ -1,3 +1,15 @@
+rskj (8.1.0~noble) noble; urgency=medium
+  * Parallel Transaction Execution for the Unitrie (RSKIP-144)
+  * Miniheader - block header compression (RSKIP-351)
+  * Union Bridge Integration: New Methods Added to PowPeg Bridge Contract (RSKIP-502)
+  * New storage cells in Bridge native contract for base and super events info (RSKIP-529)
+  * Additional methods for the BlockHeader precompiled contract (RSKIP-536)
+  * Most notable non-consensus changes are:
+  * Refactor traceFilter method for improved performance and reliability by @dlealmac in #3325
+  * Make filterid less predictable by using random UUID generation by @rmoreliovlabs in #3312
+
+ -- IOV Labs Support <support@iovlabs.org> Fri, 7 Nov 2025 16:51:00 -0300
+
 rskj (8.0.0~noble) noble; urgency=medium
 
   * Peg-out efficiency improvement (Segwit) (RSKIP-305)
