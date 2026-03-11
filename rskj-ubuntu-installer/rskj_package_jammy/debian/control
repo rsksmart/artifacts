@@ -7,7 +7,7 @@ Standards-Version: 3.9.7
 Homepage: http://www.rsk.co
 
 Package: rskj
-Architecture: any
+Architecture: all
 Depends: debconf, openjdk-17-jre, ${misc:Depends}
 Description: Java implementation of RSK node
  RSKj is a Java implementation of the RSK protocol. http://www.rsk.co
