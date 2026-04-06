@@ -1,3 +1,15 @@
+rskj (9.0.0~jammy) jammy; urgency=medium
+
+  * This release includes the Vetiver network upgrade as specified in RSKIP-553.
+  * (Testnet-only) Add the baseEvent field to the block header extension (RSKIP-535)
+  * (Mainnet-only) Add new methods to the BlockHeader precompiled contract (RSKIP-536)
+  * Improve the Bridge method getEstimatedFeesForNextPegOutEvent and add a new parameterized method (RSKIP-540)
+  * Reject new contract code starting with the 0xEF byte (RSKIP-544)
+  * Deprecate RSKIP-459 (RSKIP-551)
+  * Improve Blake2F input validation (RSKIP-552)
+
+ -- IOV Labs Support <support@iovlabs.org> Mon, 6 Apr 2026 10:25:00 -0300
+
 rskj (8.1.0~jammy) jammy; urgency=medium
   * Parallel Transaction Execution for the Unitrie (RSKIP-144)
   * Miniheader - block header compression (RSKIP-351)
