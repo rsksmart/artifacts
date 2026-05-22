@@ -56,7 +56,7 @@
     <logger name="db" level="ERROR"/>
     <logger name="net" level="ERROR"/>
     <logger name="start" level="ERROR"/>
-    <logger name="cli" level="ERROR"/>
+    <logger name="cli" level="INFO"/>
     <logger name="txs" level="ERROR"/>
     <logger name="gas" level="ERROR"/>
     <logger name="main" level="ERROR"/>
