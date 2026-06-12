@@ -1,3 +1,10 @@
+rskj (9.0.2~bionic) bionic; urgency=medium
+
+  * Improves baseEvent handling, by @italo-sampaio in #3523.
+  * Improving nonce decoding resilience and error handling, by @fmacleal in #3552.
+
+ -- IOV Labs Support <support@iovlabs.org> Wed, 12 Jun 2026 17:13:00 -0300
+
 rskj (9.0.1~bionic) bionic; urgency=medium
 
   * Fix: debug_traceTransaction failing with callTracer, by @italo-sampaio in #3498.
