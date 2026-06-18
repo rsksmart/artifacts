@@ -1,3 +1,11 @@
+rskj (9.0.3~noble) noble; urgency=medium
+
+  * Fix incorrect calldata for sub-calls in trace_transaction and trace_block, by @italo-sampaio in #3546.
+  * Fix commitHash value for docker images, by @fmacleal in #3560.
+  * Set default limits for the eth_getLogs method, by @wlaclaw in #3475.
+
+ -- IOV Labs Support <support@iovlabs.org> Thu, 18 Jun 2026 20:13:00 -0300
+
 rskj (9.0.2~noble) noble; urgency=medium
 
   * Improves baseEvent handling, by @italo-sampaio in #3523.
