@@ -1,3 +1,12 @@
+rskj (9.0.4~bionic) bionic; urgency=medium
+
+  * Add logs for better monitoring federation change process, by @julia-zack in #3364.
+  * Fix eth_estimateGas: don't use the caller-provided gas as the simulation budget, by @italo-sampaio in #3520.
+  * Fix invalid port handling in IpUtils, by @alaningtrump in #3611.
+  * Fix the Import Sync feature, by @fmacleal in #3669.
+
+ -- IOV Labs Support <support@iovlabs.org> Fri, 7 Aug 2026 10:33:00 -0300
+
 rskj (9.0.3~bionic) bionic; urgency=medium
 
   * Fix incorrect calldata for sub-calls in trace_transaction and trace_block, by @italo-sampaio in #3546.
