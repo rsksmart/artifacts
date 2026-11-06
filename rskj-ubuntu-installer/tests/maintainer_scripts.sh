@@ -40,7 +40,8 @@ build_deb() { # series version
 }
 
 install_deb() { # series version
-	dpkg -i --force-depends "/tmp/build/rskj_$2~$1_all.deb" >/tmp/install.log 2>&1
+	dpkg -i --force-depends "/tmp/build/rskj_$2~$1_all.deb" >/tmp/install.log 2>&1 && return 0
+	echo "--- install output ---"; tail -15 /tmp/install.log; echo "---"; return 1
 }
 
 reset_state() {
@@ -56,9 +57,9 @@ preseed() {
 }
 
 license_answer_saved() { debconf-get-selections 2>/dev/null | grep -q "$LICENSE_Q.*true"; }
-installed() {
-	dpkg -s rskj 2>/dev/null | grep -q '^Status: install ok installed' && return 0
-	echo "--- last install output ---"; tail -15 /tmp/install.log; echo "---"; return 1
+version_is() { [ "$(dpkg-query -W -f='${Version}' rskj 2>/dev/null)" = "$1" ]; }
+answer_cleared_by_purge() {
+	license_answer_saved && dpkg -P rskj >/dev/null 2>&1 && ! license_answer_saved
 }
 
 failures=0
@@ -70,17 +71,17 @@ check() { # name command...
 for current in $SERIES; do
 	build_deb "$current" 9.0.4 && build_deb "$current" 9.0.5 || { failures=$((failures + 1)); continue; }
 
-	reset_state; preseed; install_deb "$current" 9.0.4
-	check "preseeded fresh install completes" installed
+	reset_state; preseed
+	check "preseeded fresh install succeeds" install_deb "$current" 9.0.4
 	check "preseeded fresh install creates rsk account" bash -c 'id rsk >/dev/null 2>&1'
 
 	reset_state; groupadd -g 888 rsk; useradd rsk -u 888 -g 888 -s /sbin/nologin
-	preseed; install_deb "$current" 9.0.4; install_deb "$current" 9.0.5
-	check "upgrade completes" installed
+	preseed
+	check "install of 9.0.4 succeeds" install_deb "$current" 9.0.4
+	check "upgrade to 9.0.5 succeeds" install_deb "$current" 9.0.5
+	check "upgrade leaves 9.0.5 installed" version_is "9.0.5~$current"
 	check "upgrade keeps the license answer" license_answer_saved
-
-	dpkg -P rskj >/dev/null 2>&1
-	check "purge clears the license answer" bash -c '! debconf-get-selections 2>/dev/null | grep -q "'"$LICENSE_Q"'"'
+	check "purge clears the saved license answer" answer_cleared_by_purge
 
 	check "no stderr redirect to a file named %1" bash -c '! grep -rn "2>%1" '"$PKG/rskj_package_$current"'/debian'
 done
