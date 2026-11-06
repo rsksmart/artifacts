@@ -14,9 +14,16 @@ errmsg()
     echo >&2 ''
 }
 
+ensure_account()
+{
+    groupadd rsk -g 888 -f
+    id rsk > /dev/null 2>&1 || useradd rsk -d /var/lib/rsk -s /sbin/nologin --uid=888 --gid=888
+}
+
 db_get shared/accepted-$license
 if [ "$RET" = "true" ]; then
     echo "$license license has already been accepted" >&2
+    ensure_account
     exit 0
 fi
 
@@ -39,8 +46,7 @@ while true; do
         db_get shared/accepted-$license
         if [ "$RET" = "true" ]; then
             # license accepted
-            groupadd rsk -g 888 -f
-			id rsk > /dev/null 2>%1 || useradd rsk -d /var/lib/rsk -s /sbin/nologin --uid=888 --gid=888
+            ensure_account
             exit 0
         fi
         # error on decline license (give user chance to back up)
