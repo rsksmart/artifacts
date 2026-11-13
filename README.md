@@ -34,6 +34,5 @@ It needs Docker and takes a few minutes. Per series it checks:
 - a fresh install with the debconf answers preseeded succeeds and creates the `rsk` account
 - an upgrade from 9.0.4 to 9.0.5 succeeds, leaves 9.0.5 installed and keeps the saved license answer
 - `dpkg -P` clears the saved license answer
-- no maintainer script redirects stderr to a file named `%1` (`2>%1`)
 
 The container has no JRE, so `java` is stubbed and the package is installed with `--force-depends`. Run it after changing anything under `rskj_package_*/debian/` and when adding a series; it exits non-zero on any failure. The series list is the `ALL_SERIES` variable at the top of the script.

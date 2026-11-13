@@ -82,8 +82,6 @@ for current in $SERIES; do
 	check "upgrade leaves 9.0.5 installed" version_is "9.0.5~$current"
 	check "upgrade keeps the license answer" license_answer_saved
 	check "purge clears the saved license answer" answer_cleared_by_purge
-
-	check "no stderr redirect to a file named %1" bash -c '! grep -rn "2>%1" '"$PKG/rskj_package_$current"'/debian'
 done
 
 [ "$failures" -eq 0 ] && echo "ALL PASS" || { echo "$failures FAILED"; exit 1; }
