@@ -3,7 +3,7 @@ Description=RSK Node
 
 [Service]
 LimitNOFILE=500000
-ExecStart=<JAVA_PATH> -Dlogback.configurationFile=/etc/rsk/logback.xml -cp /usr/share/rsk/rsk.jar co.rsk.Start
+ExecStart=<JAVA_PATH> -XX:-UseBASE64Intrinsics -Dlogback.configurationFile=/etc/rsk/logback.xml -cp /usr/share/rsk/rsk.jar co.rsk.Start
 User=rsk
 
 [Install]

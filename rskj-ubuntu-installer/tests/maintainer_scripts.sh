@@ -30,7 +30,8 @@ build_deb() { # series version
 	rm -rf "$d" && mkdir -p "$d"
 	cp -r "$PKG/rskj_package_$series/." "$d/"
 	sed -i "s|<V>|$version|g" "$d/debian/control"
-	sed -i "1s|(9.0.4~$series)|($version~$series)|" "$d/debian/changelog"
+	sed -i "1s|([^)~]*~$series)|($version~$series)|" "$d/debian/changelog"
+	grep -q "^rskj ($version~$series)" "$d/debian/changelog" || { echo "changelog version rewrite failed for $series $version"; return 1; }
 	head -c 1000 /dev/urandom >"$d/src/rsk.jar"
 	cp "$PKG"/config/*.conf "$PKG/config/logback.xml" "$d/src/"
 	cp "$PKG/init-scripts/rsk.service-node" "$d/src/rsk.service"
@@ -57,6 +58,9 @@ preseed() {
 }
 
 license_answer_saved() { debconf-get-selections 2>/dev/null | grep -q "$LICENSE_Q.*true"; }
+unit_disables_base64_intrinsic() { # CVE-2026-114938: flag must follow the substituted java path
+	grep -qE '^ExecStart=/[^ <]*java -XX:-UseBASE64Intrinsics ' /lib/systemd/system/rsk.service
+}
 version_is() { [ "$(dpkg-query -W -f='${Version}' rskj 2>/dev/null)" = "$1" ]; }
 answer_cleared_by_purge() {
 	license_answer_saved && dpkg -P rskj >/dev/null 2>&1 && ! license_answer_saved
@@ -80,6 +84,7 @@ for current in $SERIES; do
 	check "install of 9.0.4 succeeds" install_deb "$current" 9.0.4
 	check "upgrade to 9.0.5 succeeds" install_deb "$current" 9.0.5
 	check "upgrade leaves 9.0.5 installed" version_is "9.0.5~$current"
+	check "unit starts java with the Base64 intrinsic off" unit_disables_base64_intrinsic
 	check "upgrade keeps the license answer" license_answer_saved
 	check "purge clears the saved license answer" answer_cleared_by_purge
 done

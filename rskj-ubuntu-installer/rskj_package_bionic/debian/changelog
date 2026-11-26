@@ -1,3 +1,11 @@
+rskj (9.0.5~bionic) bionic; urgency=medium
+
+  * Security: JDK Base64 intrinsic mitigation (CVE-2026-114938), by @fmacleal in #3840.
+  * Start the node with -XX:-UseBASE64Intrinsics in the systemd unit and reload
+    systemd units on upgrade, so the mitigation applies after restarting the node.
+
+ -- IOV Labs Support <support@iovlabs.org>  Thu, 26 Nov 2026 09:09:48 -0300
+
 rskj (9.0.4~bionic) bionic; urgency=medium
 
   * Add logs for better monitoring federation change process, by @julia-zack in #3364.

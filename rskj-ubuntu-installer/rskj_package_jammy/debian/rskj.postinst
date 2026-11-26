@@ -32,6 +32,11 @@ sed -i "s|<COINBASE_SECRET>|${COINBASE_SECRET}|g" $CONF_PATH/regtest.conf
 sed -i "s|<SOLC_PATH>|${SOLC_PATH}|g" $CONF_PATH/regtest.conf
 sed -i "s|<JAVA_PATH>|${JAVA}|g" $NODE_SERVICE
 
+# Reload units so a restart after upgrade picks up the new ExecStart
+if [ -d /run/systemd/system ]; then
+	systemctl --system daemon-reload >/dev/null || true
+fi
+
 systemctl enable rsk.service
 
 db_fset shared/config seen false
